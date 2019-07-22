@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script>
+
+        function ordenar(data) {
+            let ordenado = new Array();
+
+            for (let i = 0; i < data.length; i++) {
+                for (let j = 1; j < (datos.length - 1); j++) {
+                    if (data[j] > data[j + 1]) {
+                        let aux = data[j];
+                        data[j] = data[j + 1];
+                        data[j + 1] = aux;
+                    }
+                }
+            }
+
+            return data;
+        }
+
+        let datos = new Array(0, 1, 0, 1, 1, 1, 0, 0, 0, 1);
+
+
+        console.log(ordenar(datos));
+
+
+
+        //-----------------NUEVA OPCION------------//
+
+       /* let datos = new Array(0, 1, 0, 1, 1, 1, 0, 0, 0, 1);
+
+        function ordenar(data) {
+            for (let i = 0; i < datos.length; i++) {
+                for (let j = 1; j < (datos.length - 1); j++) {
+                    if (datos[j] > datos[j + 1]) {
+                        k = datos[j + 1];
+                        datos[j + 1] = datos[j];
+                        datos[j] = k;
+                    }
+                }
+            }
+            return datos;
+        }
+        console.log(ordenar(datos));*/
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<script>
+function obtenerNumeroAleatorio(min, max) {
+        return (Math.random() * ((max + 1) - min) + min);
+    }
+    
+    let tiradas = new Array(0,0,0,0,0,0);
+    
+    for (let i = 0; i < 10000; i++){
+        let index = parseInt(obtenerNumeroAleatorio(0, 5));
+        tiradas[index]++;
+    }
+    
+    for (let i = 0; i < tiradas.length; i++){
+        console.log("El " + (i+1) + " ha salido " +
+        tiradas[i] + " veces");
+    }
+
+
+//----------------OTRA OPCIÓN---------------------//
+
+function obtenerNumeroAleatorio(min, max) {
+        return (Math.random() * ((max + 1) - min) + min);
+    }
+    
+    let tiradas = new Array(0,0,0,0,0,0);
+    
+    for (let i = 0; i < 10000; i++){
+        let tirada = parseInt(obtenerNumeroAleatorio(1, 6));
+        tirada[i-1] = tirada[i-1] + 1;
+        switch(tirada){
+            case 1:
+                tiradas[0]++; //tiradas[0] = tiradas[0] + 1;
+                break;
+            case 2:
+                tiradas[1]++; //tiradas[1] = tiradas[1] + 1;
+                break;
+            case 3:
+                tiradas[2]++; //tiradas[2] = tiradas[2] + 1;
+                break;
+            case 4:
+                tiradas[3]++; //tiradas[3] = tiradas[3] + 1;
+                break;
+            case 5:
+                tiradas[4]++; //tiradas[4] = tiradas[4] + 1;
+                break;
+            case 6:
+                tiradas[5]++; //tiradas[5] = tiradas[5] + 1;
+                break;
+        }
+    }
+    
+    for (let i = 0; i < tiradas.length; i++){
+        console.log("El " + (i+1) + " ha salido " +
+        tiradas[i] + " veces");
+    }
+</script>
+</head>
+<body>
+</body>
+</html>

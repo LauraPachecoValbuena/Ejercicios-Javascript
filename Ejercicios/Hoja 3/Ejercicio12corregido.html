@@ -1,0 +1,16 @@
+<html>
+<head>
+<script>
+function timecut(segundos) {    
+    let horas = parseInt(segundos / 3600);
+    let segundosRestantes = segundos % 3600;
+    let minutos = parseInt(segundosRestantes / 60);    
+    segundosRestantes =  segundosRestantes % 60;
+    console.log(horas + ":" + minutos + ":" + segundosRestantes);
+}
+timecut(3675);
+</script>
+</head>
+<body>
+</body>
+</html>

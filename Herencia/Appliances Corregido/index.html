@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="js/classes/Appliance.js"></script>
+<script src="js/classes/WashingMachine.js"></script>
+<script src="js/classes/Television.js"></script>
+<script> 
+
+	let oven = new Appliance(150, "green", "a", 30);
+	console.log(oven);
+	
+	let tv = new Television(750, "white", "B", 25, 40, true);
+	console.log(tv);
+	
+	let wm = new WashingMachine(300, "blue", "C", 60, 35);
+	console.log(wm);
+	
+	
+	let movidas = [oven, tv, wm];
+	
+	let tachin = 0;
+	
+	for (let movida of movidas){
+		tachin += movida.getFinalPrice();
+		console.log("movida: " + movida.getFinalPrice());
+	}
+	
+	console.log("TOTAL......" + tachin);
+	
+	
+</script>  
+</head>
+<body> 
+</body>
+</html>

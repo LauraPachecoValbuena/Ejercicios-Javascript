@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"  src="Producto.js" charset="UTF-8"></script>
+<meta charset="UTF-8">
+<script>
+
+let prod1 = new Producto(5, "Enchilada", "25/04/2019", "vendido");
+
+console.log(prod1.verEstado());
+prod1.cambiarFecha("29/04/2019");
+console.log(prod1.verFecha());	
+
+
+let p2 = new Producto(8, "Fajitas", "28/02/2015", "reservado");
+console.log(p2.verFecha());
+console.log(prod1.verNombre());	
+console.log(p2.verNombre());		
+	
+</script>
+</head>
+<body>
+</body>
+</html>

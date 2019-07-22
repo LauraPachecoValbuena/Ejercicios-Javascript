@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+
+// mostrar los pares del 0 a un millón.
+
+let diaMes = 1;
+
+while (diaMes <= 31){
+    let diaSemana = "";
+    switch (diaMes % 7){
+        case 1:
+            diaSemana = "L";
+        break;
+        case 2:
+            diaSemana = "M";
+        break;
+        case 3:
+            diaSemana = "X";
+        break;
+        case 4:
+            diaSemana = "J";
+        break;
+        case 5:
+            diaSemana = "V";
+        break;
+        case 6:
+            diaSemana = "S";
+        break;
+        case 0:
+            diaSemana = "D";
+        break;    
+    }
+
+    console.log(diaSemana + " - " + diaMes);
+    
+    diaMes++;
+}
+</script>
+</head>
+<body>
+</body>
+</html>

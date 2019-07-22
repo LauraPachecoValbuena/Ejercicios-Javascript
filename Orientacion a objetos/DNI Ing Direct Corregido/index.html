@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="js/classes/CargarLetraDni.js"></script>
+<!-- <script src="js/torrentManagement.js"></script> -->
+<script> 
+
+</script>  
+</head>
+<body bgcolor="orange"> 
+
+<form>
+<span> Acceso para ti </span>
+<br/>
+<span>Número de Documento <span>
+<input type="text" id="dni" maxlength="8" onkeyup="cargarLetraDNI()"/>
+<br/>
+<span>Fecha de Nacimiento: <span>
+<input type="text" id="dia" maxlength="2" size="2" placeholder="DD" onkeyup="comprobarDia()"/>
+<input type="text" id="mes" maxlength="2" size="2" placeholder="MM" onkeyup="comprobarMes()" />
+<input type="text" id="year" maxlength="4" size="4" placeholder="AAAA" onkeyup="comprobarYear()" />
+<br/>
+<input type=button id="btnEnviar" value="Enviar" onclick="enviar()"/>
+</form>
+<br/>
+
+</body>
+</html>

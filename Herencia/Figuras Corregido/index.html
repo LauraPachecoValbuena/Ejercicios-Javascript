@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="js/classes/Figura.js"></script>
+<script src="js/classes/Paralelogramo.js"></script>
+<script src="js/classes/Circulo.js"></script>
+<script> 
+
+	let circulo1 = new Circulo("gris", 3);
+	
+	let rectangulo1 = new Paralelogramo("naranja", 5, 3);	
+	
+	let cuadrado1 = new Paralelogramo("azul", 4);
+	
+	let figuras = new Array(circulo1, rectangulo1, cuadrado1);
+	
+	for (figura of figuras){
+		console.log(figura.getColor(), 
+		figura.calcularArea(),
+		figura.calcularPerimetro());
+	}
+	
+	
+</script>  
+</head>
+<body> 
+</body>
+</html>

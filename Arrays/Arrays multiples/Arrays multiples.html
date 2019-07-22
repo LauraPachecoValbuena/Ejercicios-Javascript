@@ -1,0 +1,77 @@
+<html>
+<head>
+<script>
+
+let datos = new Array (     //la i me da la posicion de loa arrays de dentro, es decir i=2 me va a dar lo svalores del array 11, 14, 21, 23 puesto que es el array que está en el indice 2 
+  [i=0]  new Array(13,18,20,21), 
+               //[j=0] [j=1] [j=2] [j=3]//la j me da el índice de los arrays de dentro es decir, i=2 y j=3 del array 11, 14, 21, 23 la j=23. 
+  [i=1]  new Array(17,19,22,26),
+  [i=2]  new Array(11,14,21,23),
+  [i=3]  new Array(14,15,18,24),
+);
+
+for (let i = 0; i < datos.length; i++){
+        for (j = 0; j < datos[i].length; j++){
+            console.log("[" + i + "]" + "[" + j + "]=" + datos[i][j]);
+        }
+    }
+
+
+//console.log(datos[1][2]) me enseñará 18
+
+
+//---------AL REVÉS-------/
+let fila0 = new Array(13, 18, 20, 21);
+    let fila1 = new Array(17, 19, 22, 26);
+    let fila2 = new Array(11, 14, 21, 23);
+    let fila3 = new Array(14, 15, 18, 24);
+    
+    let datos2 = new Array(fila0, fila1, fila2, fila3);
+
+//---------------------CON ARRAYS ASIMÉTRICOS----------------//
+
+let cosas = new Array(      //En este caso los arrays no tienen los mismos valores pero funcion exactamente igual que arriba.
+        new Array(1,2,3,4,5,6,4,7,8,9,10,11),  
+        new Array("a","b","c"),
+        new Array("do","re", "mi", "fa", "sol"),
+        
+    );
+    
+    
+    for (let i = 0; i < cosas.length; i++){
+        for (j = 0; j < cosas[i].length; j++){
+            console.log("[" + i + "]" + "[" + j + "]=" + cosas[i][j]);
+        }
+    }
+
+//------------ejemplo--------//
+
+let datos = new Array (
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,'x',0),
+    new Array(0,0,0,0,0),
+)
+
+let encontrado = false;
+
+for (let i = 0; i < datos.length && !encontrado; i++) {
+    for (j = 0; j < datos[i].length && !encontrado; j++) {
+        if (isNaN(datos[i][j])) {
+            encontrado==true
+            console.log('la posición del elemento distinto es:'  +  i  +  j );
+        }
+        
+    }
+
+}
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+var numero = prompt ('mete un numero');
+console.log(typeof(numero)); //que tipo es el dato
+numero = parseInt (numero);
+console.log (typeof(numero));
+if (isNan(numero) == false) {   //será verdadero cnd sea un texto digo q sea == false para hacer esto cnd Si sea un numero.
+    console.log('numero' + numero);
+    var doble = numero * 2;
+    console.log ('el doble: ' + doble);
+    var triple = numero * 3;
+    console.log ('el triple: ' + triple);
+    var cuadrado = numero * numero;
+    console.log ('el cuadro: ' + cuadrado);
+}
+else {
+    console.log ('no has insertado un numero')
+}
+</script>
+</head>
+<body>
+</body>
+</html>

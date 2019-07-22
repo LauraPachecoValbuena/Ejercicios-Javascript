@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+function mayorque(a,b) {
+            if (a == b) {
+                return "igual";
+            }
+            else if (a > b) {
+                return "mayor";
+            }
+            else {
+                return "menor";
+            }
+        }
+        let firstnum = parseFloat(prompt("Introduce el primer numero"));
+        let secondnum = parseFloat(prompt("Introduce el segundo número"));
+
+        if (isNaN(firstnum) == true || isNaN(secondnum) == true) {
+            console.log("Uno o ambos valores no numéricos son, Joven Luke");
+        }
+        else {
+            console.log("El primer número es " + mayorque(firstnum,secondnum) + " el segundo");
+        }
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+    
+let bruto = parseFloat(prompt("Dime cuanto has pagado, chaval"));
+let descuento = calcularDescuento(bruto);
+
+function calcularDescuento(cantidad){
+    let dto = 0;
+    if (cantidad > 20000 && cantidad <= 100000){
+        dto = 5;
+    }
+    else if (cantidad > 100000){
+        dto = 10;
+    }
+    
+    return dto;
+}
+
+console.log("Tienes derecho a un descuento de " + descuento + "%");
+console.log("El total es " + (bruto - (bruto * descuento / 100)));
+
+</script>
+</head>
+<body>
+</body>
+</html>

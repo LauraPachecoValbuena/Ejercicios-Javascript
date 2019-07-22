@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+
+ let base = parseInt(prompt('dame la base'));
+ let exponente = parseInt(prompt('dame el exponente'));
+
+ function potencia (b,e) {
+     let multiplicacion = 1; // como es multiplicación se le pone de primer valor 1, puesto que cualquier número multiplicado x cero es cero. Al mutiplicar el primrr valor tiene q ser 1 si fuese suma si podria ser cero.
+     for ( let i = 0; i < e; i++) {
+         multiplicacion *= b;
+     }
+     return multiplicacion //va  devolver el resulatdo que hace mi funcion.
+ }
+
+ let resultado = potencia (base,exponente); //en la variable resultado se guarda el valor que me devuielve return.
+ console.log (resultado); //aquí le digo que me muestre ese resultado.
+
+</script>
+</head>
+<body>
+</body>
+</html>

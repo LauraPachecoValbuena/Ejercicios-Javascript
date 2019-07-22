@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+let horasTrabajadas = parseFloat(prompt('dame tus horas trabajadas'));
+let prercioHora = parseFloat(prompt('dame tu salario bruto por horas'));
+
+function calcularSalario (n1,n2) {
+    let resultado;
+
+    if (n1 <= 40){
+        let resultado= (n1 * n2)
+    }
+}
+
+
+
+//---------resultado Carlos----------//
+
+function calcularSalarioSemanal(horas, precioHora){
+    let sueldoSemanal;
+    if (horas <= 40){
+        sueldoSemanal = horas * precioHora;
+    }
+    else {
+        let horasExtra = horas - 40;
+        let sueldoExtra = horasExtra * precioHora * 1.5;
+        let sueldoBase = 40 * precioHora;
+        sueldoSemanal = sueldoBase + sueldoExtra;
+    }
+
+}
+//50 horas a 10 €/hora
+calcularSalarioSemanal(50, 10);
+
+</script>
+</head>
+<body>
+</body>
+</html>

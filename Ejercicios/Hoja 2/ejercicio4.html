@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+var n1 = parseInt(prompt('introduce un numero'));
+var n2 = parseInt(prompt('introduce otro numero'));
+var n3 = parseInt(prompt('introduce un último numero'));
+/*var result = sumar (n1,n2, n3);*/
+function sumar (n1, n2, n3){
+    return n1 + n2;
+    return n1 + n3;
+    return n2 + n3;
+}
+var result = sumar (n1, n2);
+/*console.log (result);*/
+result = sumar (n1, n3);
+/*console.log (result);*/
+result = sumar (n2,n3);
+/*console.log (result);*/
+
+if (n1 + n2 ==n3 || n1 + n3 ==n2){
+    console.log ('bien');
+}
+else {
+		/*if (n1 + n3 ==n2){
+			console.log ('bien');
+		}
+		else {
+		console.log ('los numeros no cumplen la condicion');
+        }*/
+    if (n2 + n3 ==n1){
+        console.log ('n2 más n3 es igual n1');
+        }
+        else {
+            console.log ('los numeros no cumplen la condición');
+        }
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

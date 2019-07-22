@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+const medida = 5;
+for (let i = 0, cont = 1; i < medida; i++, cont++){
+    let fila = "";
+    for (let j = 0; j < medida; j++){
+        if (j > i){
+            fila =  "." + fila;
+        }
+        else {
+            fila =  cont + fila;
+        }
+    }
+    console.log(fila);
+}
+
+
+//----OTRA OPCION------//
+
+const medida = 5;
+for (let i = 0; i < medida; i++){
+    let fila = "";
+    for (let j = 0; j < medida; j++){
+        if (j > i){
+            fila =  "." + fila;
+        }
+        else {
+            fila =  (i + 1) + fila;
+        }
+    }
+    console.log(fila);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

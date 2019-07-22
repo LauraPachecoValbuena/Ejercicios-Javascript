@@ -1,0 +1,86 @@
+<html>
+<head>
+<script>
+
+
+//---------------OBJECTS LITERALS (objetos en caliente)---------------------------//
+
+function crearAnimal (nombre, propietario) {
+    return {  //todo lo que hay dentro de éstas llaves hasta el ; es una clase con valores = un objeto.
+        //propiedades
+        nombre, 
+        propietario,
+
+        //métodos
+        getInfo(){
+            return `${this.nombre} es de ${this.propietario}`
+        },
+
+        direccion: {  //ésto es un objeto dentro de un objeto.
+            calle: "Calle Mayor", 
+            ciudad: "Madrid"
+        }
+    };
+}
+
+
+let gato = crearAnimal("Gato", "Carlos");
+document.write(gato.getInfo());
+document.write("<br/>");
+document.write(`${gato.getInfo()} <br/>`);
+
+document.write(`${gato.nombre} esta en ${gato.direccion.calle}`);
+document.write("<br/>");
+
+document.write(`${Object.getOwnPropertyNames(gato)}`);
+document.write("<br/>");
+document.write(Object.getOwnPropertyNames(gato.direccion));
+
+//esta clase sólo tiene objetos y métodos y NO tiene nombre xq ha sido creada en caliente.
+
+//----------------------------------------DESTRUCTURACION-------------------------------------------//
+
+function crearAnimal (nombre, propietario) {
+    return {  //todo lo que hay dentro de éstas llaves hasta el ; es una clase con valores = un objeto.
+        //propiedades
+        nombre, 
+        propietario,
+
+        //métodos
+        getInfo(){
+            return `${this.nombre} es de ${this.propietario}`
+        },
+
+        direccion: {  //ésto es un objeto dentro de un objeto.
+            calle: "Calle Mayor", 
+            ciudad: "Madrid"
+        }
+    };
+}
+
+
+let gato = crearAnimal("Gato", "Carlos");
+
+//coger valores de propiedades de objetos
+
+let {nombre, propietario} = gato;  //he cogido dos propioedades nombre y propietario. MUY IMPORATNTE!! se tienen que llamar igual.
+document.write(`Nombre: ${nombre}`);
+document.write("<br/>");
+document.write(`propietario: ${propietario}`);
+document.write("<br/>");
+document.write(`direccion: ${direccion}`);
+document.write("<br/>");
+document.write(`direccion: ${direccion.calle}`);
+document.write("<br/>");
+document.write(`direccion: ${direccion.ciudad}`);
+document.write("<br/>");
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

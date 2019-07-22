@@ -1,0 +1,56 @@
+<<html>
+<head>
+<script>
+
+let cantidad = parseFloat(prompt ('dime cuanto pagas'));
+let code = (prompt ('dime el codigo de descuento'))
+let descuento = calcularDescuento (code); 
+
+function calcularDescuento (codigo) {  // en esta función (codigo) = let code, que es el codigo que mete el usuario.
+    let descuento = 0;
+    if (codigo == 'carlos mola mucho') {
+        descuento = 50;
+    }
+    else if (codigo == 'codespacers'){
+        descuento = 10;
+    }
+    return descuento;
+}
+
+console.log ('Tienes derecho a un descuento de'+ descuento + '%');
+console.log ('El total es' + (cantidad - (cantidad * descuento / 100)) + '€');
+
+//Resultado pasado por Carlos:
+
+//paso 1: leo la cantidad sobre la que voy a tener que hacer un descuento
+let cantidad = parseFloat(prompt("Total a pagar"));
+
+//paso 2: leo el código de descuento
+let code = prompt("Si tienes algún código de descuento, insertalo");
+
+//paso 3: a) compruebo cuanto le corresponde de descuento,
+//creo una funcion que lo calcula
+function calcularDescuento(codigo){
+    let descuento = 0;
+    if (codigo == "CARLOSMOLA"){
+        descuento = 50;
+    }
+    else if (codigo == "CODESPACERS"){
+        descuento = 10;
+    }
+    
+    return descuento;
+}
+
+//paso 3 b): Le paso el codigo a la funcion para saber el descuento
+let dto = calcularDescuento(code);
+
+//paso 4: Calculo el descuento
+console.log("El descuento es: " + dto + "%");
+console.log("El total a pagar es: " + (cantidad - (cantidad * dto / 100)) + " €");
+
+</script>
+</head>
+<body>
+</body>
+</html>

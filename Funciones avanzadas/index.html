@@ -1,0 +1,255 @@
+<html>
+<head>
+<script>
+
+function saludar(){
+    console.log("Hola!");
+}
+
+let dato = saludar;  //la variable es la función.
+console.log(dato);  //este console me va a pintar Hola!.
+
+dato();  // dato lo quie me va a dar es Hola!. que es la funcón saludar.
+
+//-------------------------------------------------------------------------------------------------------------//
+
+//Esto es una función flecha. Que se llama a través de la variable masDato. Es lo mismo que arriba a la variable le asignamos la función.
+let masDato = () => {
+    console.log("adios!");
+};
+
+console.log(masDato);
+masDato();
+
+//--------------------------------------------------------------------------------------------------------------//
+
+function saludar(){
+    console.log("Hola!");
+}
+
+function hacerCosas(numero, texto, funcion) {
+    console.log(numero);
+    console.log(texto);
+    console.log(funcion);
+    
+    funcion();
+}
+
+let num = 5;
+let text = "pepe";
+
+hacerCosas(num, text, saludar);
+
+//-------------------------------------------PRÁCTICA-------------------------------------------------------------//
+
+/* 1- Crear una función que reciba una hora del día representada en un valor numérico simple
+(1,2,3...17,18,..21,22,23), que llame a cada una de las funciones correspondientes que se encargarán de
+saludar de forma correspondiente en función de las horas que aparecen a continuación:
+- Morning: 5 am to 12 (noon)
+- Afternoon: 12 to 17
+- Evening: 17 to 21
+- Night: 21 to 4 am  */
+
+
+function sayMorningGreeting(){
+    console.log("Good Morning!");
+}
+function sayAfternoonGreeting(){
+    console.log("Good Afternoon!");
+}
+function sayEveningGreeting(){
+    console.log("Good Evening!");
+}
+function sayNightGreeting(){
+    console.log("Good Night!");
+}
+function greet (hour, fMorning, fAfternoon, fEvening, fNight){
+    if (hour >= 5 && hour < 12){
+        fMorning();
+    }
+    else if (hour >= 12 && hour < 17){
+        fAfternoon();
+    }
+    else if (hour >= 17 && hour < 21){
+        fEvening();
+    }
+    else {
+        fNight();
+    }
+}
+greet(0, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(1, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(2, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(3, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(4, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(5, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(6, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(7, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(8, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(9, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(10, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(11, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(12, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(13, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(14, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(15, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(16, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(17, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(18, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(19, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(20, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(21, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(22, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+greet(23, sayMorningGreeting, sayAfternoonGreeting, sayEveningGreeting, sayNightGreeting);
+
+
+//-------------------------------------------PRÁCTICA CON FUNCIONES FLECHA-------------------------------------------------------------//
+// estas son funciones flecha de ES6, es decir, es igual que las funciones de arriba justo debajo del enunciado. Pero se escriben así.
+greet (18,
+() => console.log("Good Morning!"),    // si la función es sólo de una linea las podemos escribir así. Si son más largas NO.
+() => console.log("Good Afternoon!"),
+() => console.log("Good Evening!"),
+() => console.log("Good Night!")
+);
+
+
+//--------------------------------------BIND = permite asociar parámetros a una función.----------------------------------------------//
+
+function sumar (a, b) {
+    console.log(a,b);
+    console.log(a + b);
+}
+
+function restar (a, b){
+    console.log(a,b);
+    console.log(a - b);
+}
+
+function operar (texto, funcionSuma, funcionResta) {
+    if (texto == "sumar") {
+        funcionSuma(); //aqui es donde estoy invocando a la funcion y NO le doy parámetros puesto que abajo con el bind ya le he asociado dos prametros. Si dentro () le meto dos parametros no funcionará. puesto que ya le he asociado los dos parametros abajo con el bind.
+    }
+    else {
+        funcionResta();
+    }
+}
+
+let valor1 = 8;
+let valor2 = 4;
+
+operar("sumar" ,
+    sumar.bind(this, valor1, valor2),  // aquí le estamops asociando dos parametros a la funcion. si o si siempre la funcion irá con los dos parametrsos.
+    restar.bind(this, valor1, valor2), //el this es la manera de hacerlo, es decir para asiagnarle dos parametros uso el this, y dsp los parametros o el nombre de los parametros.
+    restar.bind(this, 6, 9),
+)
+
+
+//--------------------------------------------------------------------BIND caso 2-----------------------------------------------------------//
+
+/* 2- Crear dos funciones una para calcular los años de perro y otra para calcular los años de gato dada una
+edad en años humanos normales. 1 año humano son 10 años de gato y 7 años de perro.
+Habrá que crear una función que reciba si el texto es “gato” o “perro” y que llame a cada una de las
+funciones correspondientes, pasándoles a cada una los años humanos que han transcurrido para poder
+calcular la edad. */
+
+function getDogYears (regularYears){
+    const HUMAN_TO_DOG_YEARS = 10;
+    console.log(regularYears * HUMAN_TO_DOG_YEARS);
+    
+}
+
+function getCatYears (regularYears){
+    const HUMAN_TO_CAT_YEARS = 7;
+    console.log(regularYears * HUMAN_TO_CAT_YEARS);
+    
+}
+
+
+
+function transformToAnimalYaers (animal, dogFuncion, catFuncion) {
+    if(animal == "dog") {
+        dogFuncion();
+    }
+    else {
+        catFuncion();
+    }
+}
+
+transformToAnimalYears("dog",
+    getDogYears.bind(this, 10),
+    getCatYears.bind(this, 14));
+    
+    
+transformToAnimalYears("cat",
+    getDogYears.bind(this, 10),
+    getCatYears.bind(this, 14));
+
+
+//--------------------------------------------------------------------BIND caso 3-----------------------------------------------------------//
+
+/* 3- Crear dos funciones que transformen metros a yardas y otra de metros a pies con los siguientes
+datos
+- 1 metro = 1.09361329834 yardas
+- 1 metro = 3.28084
+Para saber c cuál de las funciones llamar, se tendrá que parsea un string como los dos siguientes:
+- “1500 yards” -&gt; se convertirá a yardas
+- “364 feet” -&gt; se convertirá a pies
+Los valores tendrán que ser recibidos en la función original y pasados a cada una de las funciones para
+poder ser convertidos. */
+
+function convertMetersToYards (meters){
+    const YARD_TO_METER = 1.09361329834;
+    console.log(meters * YARD_TO_METER);
+}
+
+function convertMetersToFeet (meters){
+    const FOOT_TO_METER = 3.28084;
+    console.log(meters * FOOT_TO_METER);
+}
+
+
+function convertToUniversalUnits (text, yardsFunction, feetFuncion){
+    if (text == "yards"){
+        yardsFunction();
+    }
+    else {
+        feetFuncion();
+    }
+}
+
+
+let rawData = "20 yards";
+let value = parseInt(rawData.split(" ")[0]);
+let unit = rawData.split(" ")[1];
+
+convertToUniversalUnits(unit,
+    convertMetersToYards.bind(this, value),
+    convertMetersToFeet.bind(this, value));
+
+//--------------------------------------------------------------------BIND caso 3 MARIO-----------------------------------------------------------//
+
+function meter2yard(m) {
+        const yard = 1.09361329834;
+        console.log(m * yard);
+    }
+    function meter2feet(m) {
+        const feet = 3.28084;
+        console.log(m * feet);
+    }
+    
+    function parseMeters(string,f1,f2) {
+        //Obtenemos un array con 2 posiciones, valor y medida
+        let str = (string).split(" ");
+        //Si la posicion 2 son yards, llamamos a una función
+        if (str[1] == 'yards') f1(str[0]);
+        //Sino a otra
+        else f2(str[0]);
+    }
+    
+    parseMeters('4050 yards', meter2yard, meter2feet);
+
+</script>
+</head>
+<body>
+</body>
+</html>

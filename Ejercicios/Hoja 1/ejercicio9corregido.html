@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+function bisiesto(year){
+    let result = false;
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+        result true;
+    }
+        
+    return result;
+} 
+
+let num1 = parseInt(prompt('introduce un year'));
+let resultado = bisiesto (num1); //el resultado que me de la ejecucción de la funcion de arriba.y con este dato ejecuta la funcion de abajo. 
+
+if (resultado) {
+    console.log('es bisiesto');
+}
+else {
+    console.log('no es bisiesto');
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+
+// mostrar los pares del 0 a un millón.
+
+let dato = 0;
+
+while (dato < 1000001) { // ponemos 1 millon uno para que nos deje de contar ahi xq si ponemos un millon nos cuenta hast el 999.999 
+                            //para que cuente e incluya el millon debemos de poner <= y asi incluye el millon.
+    if (dato % 2 == 0){
+        console.log (dato); // esto hace que solo me muestre por pantalla lo pares.
+    }
+    
+    dato++; // se pone fuera del if para que todos los numeros sean par o impar les sume 1
+            // si esta dentro del if sólo va a incrementar (sumarle 1 =dato++) los pares.
+}           
+
+console.log ('fin bucle' + dato);
+</script>
+</head>
+<body>
+</body>
+</html>

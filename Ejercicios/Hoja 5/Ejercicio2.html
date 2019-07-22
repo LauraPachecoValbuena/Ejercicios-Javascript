@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+let dato = 5;
+let contador = 0;
+
+do {
+    dato = prompt ('dame un numero');
+    if (dato <=0 || isNaN(dato)) {  //todo esto tiene que estar dentro del do xq sino no lo hace.Nunca fuera.
+        dato = parseInt(dato); // ésto hay que volver a ponerlo xq al decirle en la condición isNaN. me vuelve a transformar el dato en texto. y lo queremos como dato.
+        if (dato > mayor) { // ésta es la condición para que me guarde el mayor valor de los numeros metidos.
+            mayor = dato;
+        }
+    }
+    contador++; //ésto es lo que hace que vaya contando las veces que quiero pedirle al usuario el dato.
+} while (contador < 5) ; //aqui le indico cuantas veces me tiene que pedir por pantalla. en este caso hast 5 veces.
+
+console.log (dato); //aquí me va a mostrar en la consola. el número mayor introducido
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

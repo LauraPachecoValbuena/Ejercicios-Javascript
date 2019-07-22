@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"  src="pruebas.js" charset="UTF-8"></script>
+<meta charset="UTF-8">
+<script>
+
+
+let luz1 = new Luz();
+let luz2 = new Luz();
+
+console.log(luz1.ver());
+luz1.pulsarInterruptor();
+console.log(luz1.ver());
+	
+
+console.log(luz2.ver());
+let i = 0;
+while(i < 1000){
+	
+	luz1.pulsarInterruptor();
+	console.log(luz1.ver());
+	luz2.pulsarInterruptor();
+	console.log(luz2.ver());
+	i++;
+}
+	
+	
+</script>
+</head>
+<body>
+</body>
+</html>

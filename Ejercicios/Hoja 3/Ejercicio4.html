@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function millas (n1){ 
+    console.log ( n1 + ' millas son ' + (n1 * 1852) + 'metros' ); 
+}
+millas(parseFloat(prompt ('dame las millas que quieras')));
+
+
+//corregido en clase:
+function millas (n1){ 
+    const KM_MILLS = 1852; //como la voy a utilizar para operar dentro de la funcion. de ahí que la ponga dentro y no fuera que es dnd debería estar. Creo la const xq este valor no cambia NUNCA. La ponemos en Mayusculas xa diferenciarla de las var y let.
+    console.log ( n1 + ' millas son ' + (n1 * KM_MILLS) + 'metros' ); 
+}
+millas(parseFloat(prompt ('dame las millas que quieras')));
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+//----------------DO WHILE------------//
+
+
+function pasarGradosFahrenheit (n1){ // funcion atómica, aquella que sólo hace una cosa.
+    const F = 33.8; // Las constantes se declaran dentro de la función. No fuera. Así sólo opera cnd se llama a la función.
+    return (n1 * F) + 'Grados Fahrenheit';
+}
+
+
+function pasarGradosKelvin (n2) {
+    const K = 274.1500; 
+    return (n2 * k) + 'Grados Kelvin'
+}
+
+do {
+    let grados = parseFloat(prompt('Dame grados celsius'));
+} while(isNaN(grados));
+
+let escala = parseFloat(prompt('en Fahrenheit (f) o Kelvin (k)'));
+
+do {
+    let escala = parseFloat(prompt('en Fahrenheit (f) o Kelvin (k)'));
+} while(escala != 'f' && escala != 'F' && escala != 'k' && escala != 'K');
+
+if (escala == 'f' || escala == 'F') {
+    resultado = (pasarGradosFahrenheit(grados));
+}
+else {
+    resultado = (pasarGradosKelvin(grados));
+}
+console.log ('Los grados son ' + resultado + 'º' + escala);
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

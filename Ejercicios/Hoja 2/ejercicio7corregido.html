@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+var resultado = obtenerMensaje(prompt('Introduce una letra'));
+
+function obtenerMensaje(x){
+  if(x == 'a' || x == "A"){
+       return 'Altas';
+  }
+  if(x == 'b' || x == "B"){
+       return 'Bajas';
+  }
+  if(x == 'c' || x == "C"){
+       return 'Consultas';
+  }
+  if(x == 'm' || x == "M"){
+       return 'Modificaciones';
+  }
+  else{
+       return 'Comandos disponibles: a, b, c, m';
+  }
+}
+console.log(resultado);
+
+//Otra version más compacta:
+
+var resultado = obtenerMensaje(prompt('Introduce una letra'));
+
+function obtenerMensaje(x){
+    let dato = 'Comandos disponibles: a, b, c, m';
+  if(x == 'a' || x == "A"){
+       dato =  'Altas';
+  }
+  if(x == 'b' || x == "B"){
+       dato =  'Bajas';
+  }
+  if(x == 'c' || x == "C"){
+       dato =  'Consultas';
+  }
+  if(x == 'm' || x == "M"){
+       dato =  'Modificaciones';
+  }
+
+  return dato;
+}
+console.log(resultado);
+
+</script>
+</head>
+<body>
+</body>
+</html>

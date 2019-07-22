@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function kilometros (n1){ 
+    console.log ( n1 + ' km son ' + (n1 * 1000) + 'm' ); 
+}
+kilometros(parseFloat(prompt ('dame los km')));
+
+
+// el corregido en clase:
+function calcularDistanciaEnMetros(n){
+   return n * 1000;
+}
+
+let kms = prompt("Introduzca kilometro");
+let metros = calcularDistanciaEnMetros(kms);
+console.log(kms + " kms son " + metros + " metros");
+
+</script>
+</head>
+<body>
+</body>
+</html>

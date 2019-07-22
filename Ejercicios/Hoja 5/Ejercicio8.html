@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+let previo = 1;
+let guardo = 1;
+let concatenar = ''; // esta variable sólo la creamos para q 
+let suma = 0;
+
+for (let i = 0; i < 5; i++) {
+    concatenar += previo; // aqui me va a mostrar el previo. mas el incremento de i
+
+    if (i != lingitud - 1) {  //con este if le indico que en el console cnd me muestre los resultados detrás del último número NO haya coma.
+        concatenación += ',';
+    }
+
+    let suma = previo + guardo; // esta es la operación que tiene que hacer entre mis dos numeros.
+    previo = guardo; //una vez que hace la suma previo pasa a valer guardo.
+    guardo = suma  // una vez que hace la suma guardo pasa a valer el resultado de la suma.
+
+}
+console.log (concatenar);
+
+</script>
+</head>
+<body>
+</body>
+</html>

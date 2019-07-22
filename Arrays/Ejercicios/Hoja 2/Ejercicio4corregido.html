@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+let nuevoArray = new Array (1,2,3,4,5,6);
+    
+    
+    function eliminarElemento(datos, elemento){
+        let nuevo = new Array(datos.length - 1);
+        for (let i = 0, j = 0; i < datos.length; i++){
+            if (datos[i] != elemento){
+                nuevo[j] = datos[i];
+                j++;
+            }
+        }
+        
+        return nuevo;
+    }
+    console.log("Antes: " + nuevoArray);
+    nuevoArray = eliminarElemento(nuevoArray, 4);
+    console.log("Despues: " + nuevoArray);
+    
+/* OTRA OPCION*/
+
+function borrameDelArray(arr, pos) {
+           let arrayNuevo = new Array(arr.length - 1);
+           for (let i = 0; i < arrayNuevo.length; i++) {
+               if (i < pos) {
+                   arrayNuevo[i] = arr[i];
+               }
+               else {
+                   arrayNuevo[i] = arr[i + 1];
+               }
+           }
+           return arrayNuevo;
+       }
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

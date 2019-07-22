@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+
+let colorArray = new Array("azul", "amarillo", "rojo", "verde", "negro", "gris");
+    let escogeColor = prompt("Dime un color a ver si aciertas y haces algo con tu puta vida Jerry");
+    //creo una variable "bandera" o "flag" que me vale para saber si he encontrado el elemento
+    let encontrado = false;
+    //pongo en la condicion del bucle el valor inicial de esa variable
+    for (let i = 0; i < colorArray.length && encontrado == false; i++) {
+        console.log(colorArray[i]);
+        //busco el elemento que sea en el array
+        if (colorArray[i] == escogeColor) {
+            //si lo encuentro, cambio el valor de la variable, para que el bucle pare
+            encontrado = true;
+        }
+    }
+    
+    if (!encontrado) {
+        console.log("No acertaste idiota");
+    }
+    else {
+        console.log("Eureka!");
+    }
+
+let datos1 = new Array(1,2,3);
+    let datos2 = new Array(2,3,4);
+    if (datos1.length == datos2.length){
+        let suma = new Array(datos1.length);
+        for (let i = 0; i < datos1.length; i++)
+        
+    }
+    else {
+        console.log("No se realiza la suma pq no tienen el mismo tamaño");
+    }
+
+</script>
+</head>
+<body>
+</body>
+</html>

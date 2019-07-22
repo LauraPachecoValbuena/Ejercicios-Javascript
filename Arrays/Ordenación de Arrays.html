@@ -1,0 +1,96 @@
+<html>
+<head>
+<script>
+
+let datos = new Array (9,8,1,4,7,11,36,47,111,994,2,3);
+console.log(datos);
+
+datos.sort(
+    function (a,b){  //ésto es una finción anonima que no tiene un nombre pero la función de lo que tiene que hacer se lo damos dentro.
+        return a - b; // aqí va cogiendo los valores de 2 en 2 del array y los resta es decior 9-8=1 como es positivo el resultado 8 es menor q 9 y pasa adelante ahora coge 9-1= 8 como es positivo quiere decir q 9 es mayor q 1 así que el 1 pasa adelante.
+    }                   // la 'a' es el valor de la izquierda y el 'b'm valor de la derecha
+);
+
+console.log(datos)
+
+//ésta es la manera más usada y más común para ordenar arrays. Auí lo está ordenando de menor a mayor
+
+
+//----------OTRA MANERA DE HACERLO-----------//
+
+let datos = new Array (9,8,1,4,7,11,36,47,111,994,2,3);
+console.log(datos);
+
+function ordenar (a,b) {  // ésto es una funcion call back que quieree decir que abajo la llamo para que haga la operacion de dentro.
+    return a - b;
+}
+
+datos.sort(ordenar); // aquí estoy llamando a la función.
+console.log(datos);
+
+//------------SI CAMBIAMOS EL CRITERIO DE ORDENACIÓN------------//
+//me lo ordena al revés, es decir de mayor a menor.
+
+let datos = new Array (9,8,1,4,7,11,36,47,111,994,2,3);
+console.log(datos);
+
+datos.sort(
+    function (a,b){  //ésto es una finción anonima que no tiene un nombre pero la función de lo que tiene que hacer se lo damos dentro.
+        return b - a ; // aqí va cogiendo los valores de 2 en 2 del array y los resta es decior 9-8=1 como es positivo el resultado 8 es menor q 9 y pasa adelante ahora coge 9-1= 8 como es positivo quiere decir q 9 es mayor q 1 así que el 1 pasa adelante.
+    }                   // la 'a' es el valor de la izquierda y el 'b'm valor de la derecha
+);
+
+console.log(datos)
+
+//------------------ORDENAR ARRAY DE TEXTO Y NO DE DATOS-------------//
+//---------------Ojo!! con las mayusculas y minusculas---------------//
+//------------Asi tal cual nos va a poner primero las mayusculas y cnd termine con las mayusculas nos va a poner las minsculas-----------// 
+
+let datos = new Array ('Antonio','Luis','Paco','antonio','paco','Carlos');
+console.log(datos);
+
+datos.sort(
+    function(a,b){
+        if(a < b){
+            return -1;
+        }
+        else if (a > b){
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+);
+console.log(datos);
+
+//-----------------ORDENAR ARRAY DE TEXTO SIN DISTINCIÓN DE MAYUSCULAS O MINSCULAS--------//
+
+let datos = new Array ('Antonio','Luis','Paco','antonio','paco','Carlos');
+console.log(datos);
+//.toLowerCase()
+datos.sort(
+    function(a,b){
+        let aMinus = a.toLowerCase(); //ésto me convirte todas las a en minuscula. 
+        let bMinus = b.toLowerCase(); //ésto me convirte todas las b en minuscula. Así aparecerá el array ordenado como Antonio, antonio (puesto que como los coge por pares el primero es Antonio que es el primero q se introdujo)
+        if(aMinus < bMinus){
+            return -1;
+        }
+        else if (aMinus > bMinus){
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+);
+console.log(datos);
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

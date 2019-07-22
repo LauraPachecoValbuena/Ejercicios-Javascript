@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+    
+function invierteArray (datos) {
+  let invertido = new Array (datos.length);
+
+  for (let i = 0; i < datos.length; i++){
+      invertido[i] = datos[datos.length - 1 - i];
+  }
+
+  return invertido;
+}
+
+let arrayDatos = new Array (1,2,3,4,5);
+console.log (invierteArray (arrayDatos));
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

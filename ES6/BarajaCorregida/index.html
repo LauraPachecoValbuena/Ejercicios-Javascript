@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="js/classes/Carta.js"></script>
+<script src="js/classes/Baraja.js"></script>
+<script> 
+	
+let baraja1 = new Baraja();
+baraja1.verCartas();
+baraja1.shuffle();
+baraja1.verCartas();
+
+
+console.log(Baraja.verContador());
+
+
+let baraja2 = new Baraja();
+console.log(Baraja.verContador());
+
+
+let baraja3 = new Baraja();
+console.log(Baraja.verContador());
+
+
+let baraja4 = new Baraja();
+console.log(Baraja.verContador());
+
+let baraja5 = Baraja.crearBaraja();
+console.log(Baraja.verContador());
+
+let baraja6 = Baraja.repartir();
+console.log(Baraja.verContador());
+
+
+</script>  
+</head>
+<body> 
+</body>
+</html>

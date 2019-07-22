@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+function factorial(n) {
+    console.log(n);
+    if (n == 100){ //para manolo
+        console.log('hasta aqui');
+    }
+    
+    else {
+    n++;
+    factorial(n);
+    }
+
+}
+
+factorial(1);
+
+//al reves (caso de exito arriba y caso de base abajo).
+function functionRecursiva(n){
+    
+    if (n != 100){     
+        console.log(n);
+        n++;
+        functionRecursiva(n);
+    }
+    else {//para manolo
+        console.log("Hast aquí");
+    }
+    
+}
+
+functionRecursiva(1);
+console.log("Ya ha acabado, ejecuto la siguiente linea");
+
+//otro caso de que si se repite arriba en el if y no se repite abajo en el else. y para cnd n == -1.
+function factorial(n) { // n vale 5 
+    console.log(n); // me sale en consola 5
+    if (n > 1) { //si 5 es n es mayor que 1 pasa abajo
+        n--; // n-- es lo mismo que 5-1, 
+        return factorial (n); //ahora ya este valor es 4.
+    }
+    
+    else {
+        return n; //aqui. me va a devlover el numero que le ponga en la condición del else. en este caso el valor es de 1, pero por ejemplo en el caso de arriba seria 100.
+    }             // este 1 que nos da aqui entonces es cuando empiza hacer la funcion de 1*5, 1*4; 1*3, 1*2, etc...
+
+}
+
+factorial(5); //empezamos x aqui, factorial vale 5 que pasa a n
+</script>
+</head>
+<body>
+</body>
+</html>

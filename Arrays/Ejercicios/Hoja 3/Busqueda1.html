@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<script>
+
+let animales = new Array ('perro','gato','caballo','tortuga','loro');
+
+let otro = 'nutria';
+let parar = false;
+
+for (let i = 0; i < animales.length && parar == false; i++){
+    
+    if (animales[i] == otro) {
+        parar = true;
+        console.log(otro + 'Si se encuentra dentro del array');
+    }
+}
+if (!parar) {
+    console.log(otro +  'No está dentro del array');
+}
+
+        
+
+
+        
+
+
+
+</script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<html>
+<head>
+<script>
+//cómo se crea un array:
+let arrayDatos = new Array(144, 44, 69, 15, 654);
+
+//si solo le doy un valor creo un
+//array de ese numero de posiciones, pero sin valores cada una de las posiciones.
+let arrayDe5 = new Array(5);
+
+//cómo se obtiene el tamaño del array
+console.log("arrayDatos.length: " + arrayDatos.length); //que son el total de valores que tiene el array, es decir, si tiene 5 números = valores pues el length será de 5.
+
+//acceso de forma estática a los valores del array:
+//se ponen los indices a mano
+console.log("arrayDatos[0]: " + arrayDatos[0]);  // de ésta manera le estoy pidiendo que me muestre el valor del array en la posición cero (ésto en el for es la i)
+console.log("arrayDatos[1]: " + arrayDatos[1]);
+console.log("arrayDatos[2]: " + arrayDatos[2]);
+console.log("arrayDatos[3]: " + arrayDatos[3]);
+
+//acceso de forma dinámica a los valores
+for (let i = 0; i < arrayDatos.length; i++){
+    console.log(arrayDatos[i]);
+}
+
+//modificar los elementos de un array (sumar 1)
+for (let i = 0; i < arrayDatos.length; i++){
+    arrayDatos[i] = arrayDatos[i] + 1;
+    console.log(arrayDatos[i]);
+}
+
+//ver todo el array: solo para debugueo,
+//no podemos trabajar con el array de esta forma
+console.log(arrayDatos);
+
+//---------------------------//
+//paso por valor
+let dato = "mama";
+let dato2 = dato;//estoy creando una variable nueva con un valor nuevo q en este caso será mama.
+dato2 = dato2 + " y papa";
+console.log(dato);
+console.log(dato2);
+
+//paso por referencia ENTREVISTA DE TRABAJO, TÍPICA PREGUNTA.
+let datos = new Array(1,2,3,4,5,6);
+let datos2 = datos; //aqui realmente no está creando un array nuevo. esto NO es correcto.Es el mismo array que arriba.
+datos2[0] = 88888;
+console.log(datos);
+console.log(datos2);
+
+//como hago una COPIA del array.
+let datos = new Array(1,2,3,4,5,6);
+//obtengo el tamaño del array con .length
+console.log(datos.length);
+
+//creo un array vacio, que va a ser la copia
+//lo inicializo a datos.length que va a valer 6
+//y lo que creo es un array vacio de 6 posiciones
+//que contendrá 6 "undefined"
+let copia = new Array(datos.length);
+
+//aquí puedes ver los 6 undefined
+for (let i = 0; i < datos.length; i++){
+    console.log(copia[i]);
+}
+
+//ahora asigno los datos del viejo array (el original)
+//a la copia
+for (let i = 0; i < datos.length; i++){
+    copia[i] = datos[i];
+}
+
+//escribo los dos arrays...
+console.log(datos);
+console.log(copia);
+
+//...modifico la copia...
+copia[0] = 88888;
+
+//... y sólo se modifica la copia y no el original
+console.log(datos);
+console.log(copia);
+
+//para quitar un dato del array:
+let datos = new Array("a","b","c","d","e","f");
+
+let datos2 = new Array(datos.length -1);
+
+for (let i = 0; i < datos2.length; i++){
+    datos2[i] = datos[i];
+}
+
+console.log(datos2);
+
+//para añadir un dato al array:
+let datos = new Array("a","b","c","d","e","f");
+
+datos[datos.length] = "g";
+
+console.log(datos);
+</script>
+</head>
+<body>
+</body>
+</html>

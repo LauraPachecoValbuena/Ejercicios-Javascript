@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="js/classes/Persona.js"></script>
+<script src="js/classes/Estudiante.js"></script>
+<script src="js/classes/Profesor.js"></script>
+<script> 
+	
+	// Ejemplos de uso
+	var estudiante1 = new Estudiante("Carolina", "Física Aplicada");
+	estudiante1.diHola(); // muestra "Hola, Soy Carolina. Estoy estudianto 	Física Aplicada."
+	estudiante1.caminar(); // muestra "Estoy caminando!"
+	estudiante1.diAdios(); // muestra "¡ Adios !"
+	// Comprobamos que las instancias funcionan correctamente
+	console.log(estudiante1 instanceof Persona); // devuelve true
+	console.log(estudiante1 instanceof Estudiante); // devuelve true
+	
+	var persona1 = new Persona("Pepe");
+	persona1.diHola();
+	persona1.caminar();
+	
+	console.log(persona1 instanceof Persona); // devuelve true
+	console.log(persona1 instanceof Estudiante); 
+	
+	
+	
+	let profe1 = new Profesor("Jose Luis", 5);
+	profe1.diHola();
+	profe1.quejarse();
+	profe1.caminar();
+	//profe1.diAdios();
+	
+	console.log(profe1 instanceof Persona); // devuelve true
+	console.log(profe1 instanceof Estudiante); 
+	console.log(profe1 instanceof Profesor); 
+	
+</script>  
+</head>
+<body> 
+</body>
+</html>

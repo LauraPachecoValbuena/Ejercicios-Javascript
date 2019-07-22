@@ -1,0 +1,192 @@
+<html>
+<head>
+<script>
+
+//------------------------------------EJERCICIO 1------------------------------------------------//
+
+let texto = "Hola Laura disfruta del veranito";
+let dev = texto.charAt(6);
+console.log(dev);
+
+//------------------------------------EJERCICIO 2------------------------------------------------//
+
+let texto1 = "Vive";
+let texto2 = "&";
+let texto3 = "deja";
+let texto4 = "vivirrrrr";
+
+let resultado = texto1.concat(" ",  texto2, " ", texto3, " ", texto4);
+console.log(resultado);
+
+//------------------------------------EJERCICIO 3------------------------------------------------//
+
+let perro = ["Bady", "es", "el", "mejor", "perro", "del mundo"];
+console.log(perro.toString());
+// let result = perro.replace(/,/g, '');  // aqui NO funciona xq se tiene que aplicar sobre un texto y NO sobre un array.
+// console.log(result)
+
+//-----------------------------------OPCION b----------------------------------------------------//
+
+let stringArray = new Array ("h", "o", "l", "i", "t", "a")
+console.log(stringArray.join('-'));
+
+stringArray = stringArray.toString();
+console.log(stringArray);
+
+let inicio = new Date().getTime();
+while (stringArray.search(",") != -1){
+    stringArray = stringArray.replace("," , '');
+}
+console.log(stringArray);
+console.log(new Date().getTime() - inicio);
+
+
+//------------------------------------EJERCICIO 4------------------------------------------------//
+
+let string1 = "yo soy raro, raro, muy raro";
+let string2 = "raro";
+let result2 = string1.endsWith(string2);
+console.log(result2);
+
+//------------------------------------EJERCICIO 5------------------------------------------------//
+
+let str1 = "bebes demasiado";
+let str2 = "bebes demasiado";
+let res = str1.localeCompare(str2);
+console.log(res);
+
+//-----------------------------------OPCION b----------------------------------------------------//
+let str1 = "bebes demasiado APO";
+let str2 = "bebes demasiado apo";
+let res = str1.toLowerCase().localeCompare(str2.toLowerCase());
+console.log(res);
+
+
+//------------------------------------EJERCICIO 6------------------------------------------------//
+
+let newDato = 'petaso';
+console.log(newDato);
+newDato = newDato.split("");
+console.log(newDato);
+newDato = newDato.reverse();
+console.log(newDato);
+newDato = newDato.join("");
+console.log(newDato);
+
+
+//------------------------------------EJERCICIO 7------------------------------------------------//
+
+let day = new Date("05/20/2018");
+console.log(day);
+
+//-----------------------------------OPCION b----------------------------------------------------//
+
+let fecha = new Date(2018,04,20);
+console.log(fecha);
+console.log(fecha.getDate(),"/", fecha.getMonth()+1,"/", fecha.getFullYear());
+
+//------------------------------------EJERCICIO 8------------------------------------------------//
+
+let today = new Date();
+console.log(today);
+
+//-----------------------------------OPCION b----------------------------------------------------//
+
+function diasEnUnMes(mes, ano) {
+    return new Date(ano, mes, 0).getDate();
+}
+
+console.log(diasEnUnMes(1, 2012));
+console.log(diasEnUnMes(2, 2012));
+
+//------------------------------------EJERCICIO 9------------------------------------------------//
+
+function calcularDiasEnMes(month, year){
+    let date = new Date();
+    date.setFullYear(year);
+    date.setMonth(month);
+    date.setDate('');
+    return date.getUTCDate();
+}
+
+console.log(calcularDiasEnMes(1, 2012)); //31
+console.log(calcularDiasEnMes(2, 2012)); //29
+console.log(calcularDiasEnMes(9, 2012)); //30
+console.log(calcularDiasEnMes(12, 2012)); //31
+
+//-----------------------------------OPCION b----------------------------------------------------//
+
+function calculateDaysOfAMonth(year, month) {
+    let n = new Date(Date.UTC(month, year, 1));
+    return new Date(n.getFullYear(), n.getMonth(), 0).getDate();
+}
+
+console.log(calculateDaysOfAMonth(02, 2012));
+
+//------------------------------------EJERCICIO 10------------------------------------------------//
+
+//ésta es la mejor manera de hacerlo, la más segura puesto que se trabaja con milisegundos.
+function ordenar (date1,date2){
+    let a = date1.getTime();
+    let b = date2.getTime();
+    if (a>b){
+        return 'La primera fecha es más grande';
+    }
+    else if(a<b){
+        return 'La segunda fecha es más grande';
+    }
+    else{
+        return 'Las fechas son iguales';
+    }
+}
+
+let fecha1 = new Date(1381319849147);
+let fecha2 = new Date(1381496487483);
+console.log(ordenar(fecha1,fecha2));
+
+
+//aqui se compara como siempre pero es muuuucho mejor trabajar las fechas como arriba con milisegundos.
+if (fecha1 > fecha2){
+    console.log("f1 es mayor");
+}
+else {
+    console.log("f2 es mayor");
+}
+
+//------------------------------------EJERCICIO 11------------------------------------------------//
+
+let dia = 1000 * 60 * 60 *24;  // ésto es un día de 24 horas.
+
+function calcularDiferenciaEnDias(date1,date2){
+  let year1 = date1.split('/')[2];
+  let month1 = date1.split('/')[1];
+  let day1 = date1.split('/')[0];
+  let a = new Date(year1,month1-1,day1);
+  let year2 = date2.split('/')[2];
+  let month2 = date2.split('/')[1];
+  let day2 = date2.split('/')[0];
+  let b = new Date(year2,month2-1,day2);
+  console.log(a,b);
+  let c = b.getTime()-a.getTime();
+  return c/(1000 * 60 * 60 * 24);
+};
+
+
+console.log(calcularDiferenciaEnDias('04/02/2014', '11/04/2014'));
+console.log(calcularDiferenciaEnDias('12/02/2014', '11/04/2014'));
+
+//-----------------------------------OPCION b----------------------------------------------------//
+
+let day1 = new Date("04/02/2014");
+let day2 = new Date("11/04/2014");
+let difference = (day2 - day1) / (1000 * 60 * 60 * 24);
+
+console.log(difference);
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

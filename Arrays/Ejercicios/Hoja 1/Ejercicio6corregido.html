@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+//para sumar arrays TIENEN que tener el mismo length.
+let datos1 = new Array(1,2,3);
+   let datos2 = new Array(2,3,4);
+   if (datos1.length == datos2.length){
+       let suma = new Array(datos1.length);
+       for (let i = 0; i < datos1.length; i++) {
+            suma[i] = datos1[i] + datos2[i];
+        }
+        
+        for (let i = 0; i < datos1.length; i++) {
+            console.log(suma[i]);
+        }
+   }
+   else {
+       console.log("No se realiza la suma pq no tienen el mismo tamaño");
+   }
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

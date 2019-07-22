@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="js/classes/Employee.js"></script>
+<script src="js/classes/Developer.js"></script>
+<script src="js/classes/Sales.js"></script>
+<script> 
+	
+	let rrhh = new Employee("Jose Antonio", "Perez Gomez", "15412555-G");
+	
+	let sales1 = new Sales("Javier", "Juarez Huesca", "2222555-G", null, 14);
+	
+	let dev1 = new Developer("Fran", "Fisco Perez", "16441266-T", "Head Dev", 200, 220);
+	
+	let slaves = new Array(rrhh, sales1, dev1);
+	
+	for (let slave of slaves){
+		let position = slave.getPosition()?slave.getPosition():"";
+		
+		console.log(slave.getName() + " " + slave.getLastname(), " - " + position + " - ", slave.getSalary());
+	}
+	
+	
+</script>  
+</head>
+<body> 
+</body>
+</html>

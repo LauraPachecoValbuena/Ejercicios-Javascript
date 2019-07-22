@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+
+let frutas = new Array ('banana', 'mango', 'manzana');
+
+//A)
+frutas.push('Kiwi');
+console.log(frutas);
+
+//B)
+let f  = frutas.splice(0,2);
+console.log(f);
+
+//----------OTRA OPCIÓN CON FUNCIÓN------------//
+let frutas = new Array ('banana', 'mango', 'manzana');
+console.log(frutas);
+frutas = eliminarElemento (frutas, 'Mango');
+console.log(frutas);
+
+function eliminarElemento (datos, elemento) {
+    let nuevo = new Array(datos.length - 1);
+        
+        for (let i = 0, j = 0; i < datos.length; i++){
+            if (datos[i] != elemento){
+                nuevo[j] = datos[i];
+                j++;
+            }            
+        }
+        
+        return nuevo;
+    }
+
+//C)
+frutas.sort();
+console.log(frutas);
+
+//D)
+let array2 = new Array ('pera','naranja','fresa');
+let nuevo = frutas.concat(array2);
+console.log(nuevo);
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

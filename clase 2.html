@@ -1,0 +1,175 @@
+<html>
+<head>
+<script>
+/*
+var a = true;
+var b = false;
+
+console.log (a);
+console.log (b);
+
+var verdad = 3 > 5;
+console.log(verdad);
+
+var verdad = 3 == 5;
+console.log(verdad);
+console.log(typeof(verdad));
+*/
+/*
+var numero = prompt ('mete un numero, tio');
+
+if (numero ==5){
+console.log ('Todod bien, es 5');
+}
+else {
+console.log ('No, no es no 5');
+} 
+*/
+/*
+var altura = prompt ('mete tu altura tapón');
+var peso = prompt ('¿eres una morcilla?');
+
+if (altura >= 1.35)  {
+	if (peso < 100) {
+		console.log ('pasas');
+	}
+	else {
+		console.log ('no pasas');
+	}
+}
+else {
+	console.log ('no pasa')
+}
+*/
+/*
+var altura;
+console.log('altura: ' + altura);
+altura = 1.85;
+console.log('altura: ' + altura);
+altura = null;
+console.log('altura: ' + altura);
+altura = 8;
+console.log('altura: ' + altura);
+
+
+var resto = 4 % 2;
+console.log('resto:' + resto);
+
+var resto = 49 % 2;
+console.log('resto:' + resto);
+
+var numero = prompt ('mete un numero tronco')
+if (numero % 2 == 0) {	
+	console.log('par');
+}
+else {
+	console.log('impar');
+}
+*/
+
+
+//funciones
+
+var p = prompt ('¿eres una morcilla?');
+function comprobarPeso(peso){
+	if (peso <= 100) {
+		console.log ('pasas');
+	}
+	else {
+		console.log ('no pasas');
+	}
+}
+
+comprobarPeso(p);
+
+//a las funciones NO le podemos poner el nomnre q haya fuera de ahí que la var sea P y no peso puesto q la función es comprobarPeso
+
+// tipos de funciones 1º tipo: no recibe nada, no devuelve nada.
+function saludar () {
+	console.log ('hola');
+}
+saludar ();
+
+//2º tipo: una función que no devuelve nada pero si recibe algoo
+function saludar2(nombre){
+	console.log('Hola' + nombre + '!');
+}
+saludar2('fulanito');
+
+//3er tipo no recibe nada pero si devueleve.
+function saludar3(){
+	return 'hola!!';
+}
+var resultado = saludar3 ();
+console.log (resultado);
+
+// 4º tipo si recibe y si devuelve
+function saludar4(texto){
+	return 'hola, como te va' + texto + '?'
+}
+var saludito = saludar4 ('Manolo');
+console.log(saludito);
+
+
+// ejemplo de clase
+function sumar (n1, n2){
+	return n1 + n2;
+}
+var result = sumar (8,9);
+console.log (result);
+result = sumar (1,7);
+console.log (result);
+result = sumar (3,6);
+console.log (result);
+result = sumar (5,5);
+console.log (result);
+
+
+function multiplicar (n1, n2){
+	console.log (n1*n2);
+}
+
+multiplicar (3,5);
+multiplicar (2,6);
+multiplicar (8,8);
+multiplicar (5,8);
+
+//practica de funciones 
+function dividir(n1, n2){
+	console.log('El resultado de dividir ' + n1 + ' / ' + n2 + ' es ' + n1/n2);
+}
+dividir(4,6);
+
+// con return
+function dividir (d1, d2){
+	return 'El resultado de dividir ' + d1 + ' / ' + d2 + ' es' + d1/d2;
+}
+var dato = dividir (8,0);
+console.log(dato);
+
+console.log (dividir(6,2));
+dividir(9,3);
+
+// para que me reconozca numeros pares e impares:
+var dato = prompt();
+dato = parseInt (dato) // est es una manera de hacerlo pero la de abajo es mejor aunq es lo mismo.
+
+var dato2 = parseInt(prompt());
+
+if (dato % 2 == 0){
+	console.log('par');
+	
+}
+else {
+	console.log('impar');
+}
+
+
+
+
+</script>
+</head>
+
+</html>
+
+

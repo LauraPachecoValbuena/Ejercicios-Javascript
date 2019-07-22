@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+let arrayDatos = new Array(20);
+
+
+function obtenerNumeroAleatorio(min, max) {
+  return (Math.random() * ((max + 1) - min) + min);
+}
+
+for (let i = 0; i < arrayDatos.length; i++) {
+    let numero = obtenerNumeroAleatorio (1,1000); //creamos esta variable xa llamar a la funcion y que me guarde en esta variable el valor (max y min q me crea la función).
+    arrayDatos [i] = parseInt(numero); //aqui en un primer momento me dice arrayDato [i=0] y me va a dar el numero de la posicion 0, dsp me va a dar el numero de la posición 1, el de la posición 2, dsp la 3, etc...
+    console.log(arrayDatos [i]);
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+    
+function concatenar(numero,repeticiones){
+    let linea = "";
+    let suma = 0;
+    for (let i = 0; i < repeticiones; i++){
+        let digitos = "";
+
+        for(let j = 0; j <= i; j++){
+            digitos = digitos + numero;
+        }
+        
+        linea += digitos + " ";
+        suma += parseInt(digitos);
+    }
+    console.log(linea);
+    console.log(suma);
+}
+
+concatenar(9,5);
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<script>
+//parte 5 SIN ELSE
+var numero = parseInt(prompt('mete un numero, tio'));
+
+if (numero >= 0){
+	console.log ('el numero leido es positivo');
+}
+if (numero < 0){
+	console.log ('el numero leido es negativo');
+}
+
+//parte 5 CON ELSE
+var numero = parseInt(prompt('mete un numero, tio'));
+
+if (numero >= 0){
+	console.log ('el numero leido es positivo');
+}
+else {
+	console.log ('el numero leido es negativo');
+} 
+
+//la forma más correcta
+var numero = parseInt(prompt('mete un numero, tio'));
+
+if (numero >= 0){
+	console.log ('el numero leido es positivo');
+}
+else if (numero < 0) {
+	console.log ('negativo');
+}
+else {
+	console.log('not a number');
+}
+
+//nueva variante
+var numero = parseInt(prompt('mete un numero, tio'));
+
+if (numero > 0){
+	console.log ('el numero leido es positivo'); 
+}
+else if (numero < 0) {
+	console.log ('negativo');
+
+}
+else if (numero == 0) {
+	console.log ('igual a cero');
+}
+else {
+	console.log ('no es un número');
+}
+
+//nueva variante comprobando primero si es un texto o no.
+var numero = parseInt(prompt('mete un numero, tio')); // parseInt o parsentFloat me convirten lo que le pido en letras al usuario en numeros. Int xa enteros y Float xa los decimales
+
+if (isNaN(numero) == true) {
+    console.log ('no has introducido un numero')
+}
+else if (numero > 0) {    // este else me sirve xa unir ifs... que sean como una cadena
+    console.log ('el numero leido es positivo');
+}
+else if (numero < 0) {     
+    console.log ('negativo');
+}
+else {    //aqui en el último else NO tenemos que especificar nada puesto q la única opcion q queda es q sea iagual a cero. Como no hay más posibilidades no se especifica, xq x descarte no hay más opciones o que sea positivo, negativo, que sea un texto y el último que no pongo que sea igual a 0
+    console.log ('igual a cero');
+}
+
+//la mejor opción. La mejor solución
+var numero = prompt ('escribe un numero');
+
+if (isNaN(numero) == true) {
+    console.log ('no has introducido un numero') //primero me va a comprobar si es texto o no.
+}
+else  {
+    var numero = parseInt (numero); // guardamos el dato q nos meta el usuario.
+    
+    if (numero > 0) {            //aqui ya empezamosa comprobar las condiciones.
+        console.log ('positivo');
+    }
+    else if (numero < 0){
+        console.log ('negativo');
+
+    }
+    else {
+        console.log ('igial que 0');
+    }
+
+}
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+function primo (n1) {
+    console.log 
+    if (n1 % n1 == 0 && n1 % 1 == n1) {
+        console.log ('es primo');
+    }
+    else {
+        console.log ('no es primo');
+    }
+}
+primo (parseFloat(prompt('dame un número')));
+
+//-------------FOR----------------//
+let numero = parseInt(prompt('dame un numero entero'));
+let esPrimo = true;
+
+for (let i = 2; i < numero && esPrimo; i++) {// le metemos el && esPrimo para que pare el bucle, esPrimo==True.
+    console.log (i);
+    if (numero % i == 0){
+        esPrimo = false;
+    }
+}
+console.log ('El' + n + 'es primo: ' + esPrimo);
+
+//-------------PASADO POR CARLOS------------//
+
+let n;
+do {
+    n = prompt("Introduce un numero");
+} while (isNaN(n));
+
+let esPrimo = true;
+for (let i = 2; i < n && esPrimo == true; i++){
+    console.log(i);
+    if (n % i == 0){
+        esPrimo = false;
+    }    
+}
+
+console.log("El " + n + " es primo: " + esPrimo);
+</script>
+</head>
+<body>
+</body>
+</html>

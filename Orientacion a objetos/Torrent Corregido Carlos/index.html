@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="js/classes/Torrent.js"></script>
+<script src="js/classes/TorrentClient.js"></script>
+<script src="js/storage/StorageManager.js"></script>
+<script src="js/torrentManagement.js"></script>
+<script> 
+
+var client = new TorrentClient();
+
+</script>  
+</head>
+<body onload="getPreviousSessionData()"> 
+
+<form>
+<span> AÑADIR TORRENT </span>
+<br/>
+<span>Titulo: <span>
+<input type=text id="title" />
+<br/>
+<span>Porcentaje de completado: <span>
+<input type=number id="completed" max=100 min=0 />
+<br/>
+<span>Tamaño: <span>
+<input type=number id="size" />
+<br/>
+<span>Tipo de archivo: <span>
+<select id="fileType">
+	<option value=1 selected>JPG</option>
+	<option value=2>AVI</option>
+	<option value=3>MP4</option>
+</select>
+<input type=button value="descargar" onclick="addTorrent();"/>
+</form>
+<br/>
+<br/>
+
+<input type=button value="Ver" onclick="ver();"/>
+
+<br/>
+<br/>
+<input type=button value="Ordenar por nombre" onclick="orderByName();"/>
+<input type=button value="Ordenar por completados" onclick="orderByPercentage();"/>
+<div id="torrentList"></div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+
+let arrayFruits = new Array ('banana', 'mango', 'manzana');
+//------------------QUITAMOS UNA FRUTA------//
+let arrayFruits2 = new Array(arrayFruits.length -1);
+
+for (let i = 0; i < arrayFruits2.length; i++){
+    arrayFruits2[i] = arrayFruits[i];
+}
+
+console.log(arrayFruits2);
+
+//---------------AÑADIMOS EL KIWI----------//
+arrayFruits[arrayFruits.length] = "Kiwi";
+console.log(arrayFruits);
+
+//-----------CONCATENACION DE ARRAYS---------//
+let arrayFruits3 = new Array ('pera', 'naranjas', 'fresas');
+let arrayConcatenacion = new Array (6);
+
+    for (i = 0; i < arrayConcatenacion.length; i++) {
+        arrayConcatenacion[0] = arrayFruits[0];
+        arrayConcatenacion[1] = arrayFruits3[0];
+        arrayConcatenacion[2] = arrayFruits[1];
+        arrayConcatenacion[3] = arrayFruits3[1];
+        arrayConcatenacion[4] = arrayFruits[2];
+        arrayConcatenacion[5] = arrayFruits3[2];
+    }
+    console.log (arrayConcatenacion);
+
+//----------------ORDENAR ALFABETICAMENTE------------//
+
+let arrayTodas = new Array ('bananas', 'pera', 'mango', 'naranja', 'manzana', 'fresas');
+
+function ordenar (arrayTodas) {
+    let longitud = arrayTodas.length;
+    for (let i = 0; i < arrayTodas.length; i++);{
+        let peque = 0;
+        for (let j = 1; j < arrayTodas.length; j++){
+            if (arrayTodas[j] < arrayTodas[peque]){
+                peque = j;
+            }
+        }
+    }
+    return arrayTodas
+}
+console.log (ordenar(arrayTodas));
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+function convertirLetraAPalabra (digito) {
+    let texto = '';
+    switch(digito) {
+        case 'L':
+        case 'l':
+            texto = "Lunes";
+            break;
+        case 'M':
+        case 'm':
+            texto = "Martes";
+            break;
+        case 'X':
+        case 'x':
+            texto = "Miercoles";
+            break;
+        case 'J':
+        case 'j':
+            texto = "Jueves";
+            break; 
+        case 'V':
+        case 'v':
+            texto = "Viernes";
+            break;
+        case 'S':
+        case 's':
+            texto = "Sabado";
+            break;       
+        case 'D':
+        case 'd':
+            texto = "Domingo";
+            break;
+        default:
+            texto = 'No has introducido la letra correcta';
+    }
+    return texto;
+}
+
+let result = convertirLetraAPalabra(prompt('dame una letra de la semana'));
+console.log (result)
+
+</script>
+</head>
+<body>
+</body>
+</html>

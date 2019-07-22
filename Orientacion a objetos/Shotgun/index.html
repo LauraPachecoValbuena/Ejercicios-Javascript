@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"  src="MachineGun.js" charset="UTF-8"></script>
+<script type="text/javascript"  src="Player.js" charset="UTF-8"></script>
+<meta charset="UTF-8">
+<script>
+
+	
+	let m1 = new MachineGun();
+	console.log(m1.verBalas());
+	
+	console.log(m1.verBalas());
+	m1.cambiarAutomatica();
+	m1.disparar();
+	console.log(m1.verBalas());
+	
+	let m2 = new MachineGun();
+	
+	let readyPlayer1 = new Player("joputa16", m1, 5);
+	readyPlayer1.getLife();
+	readyPlayer1.receiveDamage(m1.disparar());
+	readyPlayer1.getLife();
+	
+</script>
+</head>
+<body>
+</body>
+</html>

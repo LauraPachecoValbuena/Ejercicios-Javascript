@@ -1,0 +1,55 @@
+<html>
+<head>
+<script src="js/utilidades/utilidades.js"></script> <!--aqui estamos importando el archivo con la funcion del aleatorio-->
+<script src="js/classes/Song.js"></script>
+<script src="js/classes/Playlist.js"></script>
+<script src="js/gestionPlaylist.js"></script>
+<script>
+
+/*let idInicial = new Date().getTime();
+
+let s1 = new Song(idInicial++, "All apologies", "Nirvana", 124, 5);
+let s2 = new Song(idInicial++, "Angie", "Rolling Stones", 147, 4);
+let s3 = new Song(idInicial++, "Search & Destroy", "Metallica", 190, 5);
+let s4 = new Song(idInicial++, "She's mine", "Interpol", 180, 5);
+
+let miPlaylist = new Playlist("MuerteMortal");
+miPlaylist.addSong(s1);
+miPlaylist.addSong(s2);
+miPlaylist.addSong(s3);
+miPlaylist.addSong(s4);
+miPlaylist.print();
+miPlaylist.shuffle();
+miPlaylist.print();*/
+
+
+var playlist = new Playlist("Rocking w/ Charles");
+
+</script>
+</head>
+<body>
+<form action="">
+    <span>AÑADIR CANCION</span>
+    <br>
+    <span>Titulo:</span>
+    <input type="text" id="title">
+    <br>
+    <span>Banda:</span>
+    <input type="text" id="band">
+    <br>
+    <span>Duracion:</span>
+    <input type="text" id="duration">
+    <br>
+    <span>Rating:</span>
+    <select name="" id="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <input type="button" value="Añadir Cancion" onclick="addSong();">
+</form>
+<br>
+</body>
+</html>

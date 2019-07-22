@@ -1,0 +1,64 @@
+<html>
+<head>
+<script>
+
+/* 2- Crear un filtro para el siguiente array usando funciones flecha que sólo devuelva aquellas edades que superen los 60 años:
+
+const edades = [23, 62, 45, 84, 2, 62, 81, 62, 34];  */
+
+let edades = [23, 62, 45, 84, 2, 62, 81, 62, 34];
+let mayorSesenta = edades.filter(v => v > 60);
+console.log(edades);
+document.write(`Mayores: ${mayorSesenta}`);
+
+
+/* 3- Modificar un array para que se devuelvan todos los cuadrados de los valores que contenga el array.  */
+
+let array = Array.of(2,4,6,8);
+
+let array2 = Array.from(array, (value) => value * value);
+console.log(array2);
+
+//OPCION B:
+
+let getPares = [14, 7, 11];
+let cuadrado = getPares.map(v => v * v);
+document.write(`Cuadrados: ${cuadrado}`);
+document.write("<br/>");
+
+//OPCION C (con Math.pow):
+
+let getPares = [14, 7, 11];
+cuadrado = getPares.map(v => Math.pow(v,2));
+document.write(`Cuadrados: ${cuadrado}`);
+document.write("<br/>");
+
+
+/* 4- Convierte los siguientes textos a mayúsculas usando los métodos de los arrays y funciones flecha: [“Juan”, “Pedro”, “Luis”]  */ 
+
+let nombres = Array.of ("Juan", "Pedro", "Luis");
+
+let nombresMayus = Array.from(nombres, (value) => values.toUpperCase());
+document.write(`${nombresMayu}`);
+document.write("<br/>");
+
+//OPCION B: 
+
+let texto = ["Juan", "Pedro", "Luis"]
+let mayusculas = texto.map(v => v.toUpperCase());
+document.write(`Mayusculas:  ${mayusculas}` );
+document.write("<br/>");
+
+
+/* 5- Parsea los siguientes datos para obtener aquellos que sean sólo números: [ 1, 'a', '5', 4, 'x', '9', 7]  */
+
+const alfanum = [1,'a','5',4,'x','9',7];
+let onlyNums = alfanum.filter(v => typeof v == 'number');
+console.log(onlyNums);
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

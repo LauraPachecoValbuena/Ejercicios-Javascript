@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function celsius (n1,n2) {
+    if (n2 == 'f' || n2 == 'F') {
+        return (n2 * 33.8) + 'Grados Fahrenheit'; 
+    }
+    else if (n2 == 'k' || n2 == 'K') {
+        return (n2 * 274.1500) + 'Grados Kelvin';
+        
+    }
+    else {
+        return 'No has introducido la letra correcta';
+    }
+}
+let resultado = celsius (parseFloat(prompt('dame los grados celsius')), (prompt('Quieres que los transforme a Kelvin o Fahrenheit')));
+console.log (resultado); 
+</script>
+</head>
+<body>
+</body>
+</html>

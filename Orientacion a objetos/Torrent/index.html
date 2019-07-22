@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="js/classes/Torrent.js"></script>
+<script src="js/classes/ClienteTorrent.js"></script>
+<script src="js/gestionTorrent.js"></script>
+
+<script> 
+
+var listaTorrents = new ClienteTorrent("photoshop", 30, 25,"JPG");
+//let idInicial = new Date().getTime();
+
+
+
+//playlist.top();
+
+
+</script>  
+</head>
+<body onload="recuperarDatos();"> 
+
+<form>
+<span> AÑADIR TORRENT </span>
+<br/>
+<span>Titulo: <span>
+<input type=text id="title" />
+<br/>
+<span>Porcentaje de completado: <span>
+<input type=number id="percent" />
+<br/>
+<span>Tamaño: <span>
+<input type=number id="totalSize" />
+<br/>
+<span>Tipo de archivo: <span>
+<select id="typeFile">
+	<option value=1>JPG</option>
+	<option value=2>AVI</option>
+	<option value=3>MP4</option>
+</select>
+<input type=button value="descargar" onclick="addTorrent();"/>
+</form>
+<br/>
+
+<span id="clienteTorrentName"></span>
+<div id="torrent"></div>
+<br>
+
+<input type=button value="ordenar por porcentaje de completado" onclick="orderByPercent();"/>
+<br>
+<input type=button value="ordenar por nombre" onclick="orderByTitle();"/>
+<br>
+<br>
+<div id="datosUsers"></div>
+
+</body>
+</html>

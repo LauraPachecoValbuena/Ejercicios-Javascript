@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript"  src="Estudiante.js" charset="UTF-8"></script>
+<meta charset="UTF-8">
+<script>
+let uni = new Estudiante ('Luis Vargas',21,'soltero');
+//-------------con la otra opcion del get y set---------//
+console.log(uni.getNombre());
+uni.setNombre('Pepe Gomez');
+console.log(uni.getNombre());
+
+
+console.log(uni.getEdad());
+uni.setEdad(35);
+console.log(uni.getEdad());
+
+let estudiante2 = new Estudiante('Pepe Gomez', 30, 'casado');
+let estudiante3 = new Estudiante('Rita La cantaora', 37, 'casada');
+let estudiante4 = new Estudiante('Rafa Jimenez', 25, 'soltero');
+
+let estudiantes = new Array (uni, estudiante2, estudiante3, estudiante4);
+
+for (let i = 0; i < estudiantes.length; i++) {
+    console.log(estudiantes[i].getNombre());
+}
+
+estudiantes.sort(
+    function(a,b){
+        if(a.getNombre() > b.getNombre()){
+            return 1;
+        }
+        else if (a.getNombre() < b.getNombre()){
+            return -1;
+        }
+        else {
+            return 0;
+        }
+    }
+);
+
+for (let i = 0; i < estudiantes.length; i++) {
+    console.log(estudiantes[i].getNombre());
+}
+
+
+//------------ordenando la edad-------------//
+
+for (let i = 0; i < estudiantes.length; i++) {
+    console.log(estudiantes[i].getEdad());
+}
+
+estudiantes.sort(
+    function(a,b){
+        return b.getEdad() - a.getEdad();
+    }
+);
+
+for (let i = 0; i < estudiantes.length; i++) {
+    // console.log(estudiantes[i].getEdad());//
+    console.log(estudiantes[i].getNombre() + " - "  + estudiantes[i].getEdad());
+}
+
+
+
+
+//----------------------------------------------------//
+
+// aqúi abajo el ejercicio hecho x mi//
+
+/*console.log(uni.verNombre());
+console.log(uni.verEdad());
+console.log(uni.verEstadoCivil());
+
+let uni2 = new Estudiante ('Rita La Cantaora',25,'casada');
+console.log(uni2.verNombre());
+console.log(uni2.verEdad());
+console.log(uni2.verEstadoCivil());*/
+
+	
+	
+</script>
+</head>
+<body>
+</body>
+</html>

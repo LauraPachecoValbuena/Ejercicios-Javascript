@@ -1,0 +1,45 @@
+<html>
+<head>
+<script>
+
+//--------------------------------------------------------------------BIND caso 2-----------------------------------------------------------//
+
+/* 2- Crear dos funciones una para calcular los años de perro y otra para calcular los años de gato dada una
+edad en años humanos normales. 1 año humano son 10 años de gato y 7 años de perro.
+Habrá que crear una función que reciba si el texto es “gato” o “perro” y que llame a cada una de las
+funciones correspondientes, pasándoles a cada una los años humanos que han transcurrido para poder
+calcular la edad. */
+
+function perro (year, humano){
+    console.log(year, humano);
+    console.log(year / humano);
+}
+
+function gato (year, humano){
+    console.log(year, humano);
+    console.log(year / humano);
+}
+
+function calcularEdad (edad, funcionPerro, funcionGato) {
+    if(edad == "perro") {
+        funcionPerro();
+    }
+    else {
+        funcionGato();
+    }
+}
+
+let edad1 = 10;
+let edad2 = 9;
+
+calcularEdad("perro" ,
+perro.bind(this, edad1),
+gato.bind(this, edad2),
+)
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body{
+    width: 1150px;
+    margin: auto;
+}
+header{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-phone img{
+    width: 15px;
+}
+
+.only_wallpaper{
+    margin-top: 55px;
+}
+.principal{
+    display: flex;
+    justify-content: space-around;
+}
+
+.access{
+    margin-left: 140px;
+    width: 285px;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+}
+
+.access h2{
+    color: #DF6303
+}
+
+.accessforyou{
+    margin-bottom: -20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.accessforyou img, .accessforyou h2{
+    display: inline-block;
+}
+
+.accessforyou img{
+    margin-bottom: -8px;
+}
+
+.title, .date{
+    font-size: 1.0em;
+    margin-top: 10px;
+    color: #636e72;
+}
+
+.title input, .date input{
+    border: 1px solid #b2bec3;
+    padding: 12px;
+}
+
+
+.title input{
+    width: 90%;
+}
+
+.date{
+    margin-bottom: 30px;
+}
+
+.date input{
+    width: 23%;
+
+}
+
+.button{
+    margin: 20px auto;
+
+}
+
+.button input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #FFB07F;
+    color: white;
+    font-size: 1.1em;
+}
+
+.info{
+    margin-top: 45px;
+    margin-left: 270px;
+    width: 400px;
+    text-align: left;
+}
+
+span{
+    border-bottom:1px dotted #FF6200;
+}
+
+.dni-e{
+    margin-top: 80px;
+}
+
+.dni-img, .text-dni-e{
+    display: inline-block;
+}
+
+.dni-img img{
+    width: 80px;
+}
+
+.error{
+    color: red;
+
+}
+
+.nice{
+    color: green;
+    font-weight: bold;
+}
+
+.identification{
+    font-size: 0.8em;
+    margin-top: 4px;
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter
+}

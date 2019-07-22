@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+function suma(n1,n2) {
+    let result = -1;
+    if (n1 >= 0 && n2 >=0){
+        result = n1 + n2;       
+    }
+
+    return result;
+}
+
+let numero1 = parseInt(prompt('Numero1'));
+let numero2 = parseInt(prompt('Numero2'));
+console.log('numero introducidos:' + numero1 + 'y' + numero2);
+
+let resultado = suma (numero1,numero2);
+if (resultado == -1) {
+    console.log ('no se calcula la suma porque alguno de los numeros')
+}
+else {
+    console.log('La suma de los dos numeros es : ' + resultado);
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

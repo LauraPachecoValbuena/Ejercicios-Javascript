@@ -1,0 +1,45 @@
+<html>
+<head>
+<script>
+
+
+
+function obtenerNumeroAleatorio(min, max) {
+  return parseInt(Math.random() * ((max + 1) - min) + min);
+}          //aqui ponemos el parseint xa que NO me de numeros decimales.
+
+let arrayDatos = new Array(8,29,3,40,69,15);
+let newDatos = new Array ();
+let originalSize = arrayDatos.length;
+let i = 0;
+
+while (i < originalSize){
+    //genero un niero aleatorio entre 0 y el tamaño del array original.
+    let alea = obtenerNumeroAleatorio(0, arrayDatos.length -1);
+    console.log(arrayDatos);
+
+    //usar ese aleatorio para sacar un elemento del array usando  splice.
+    let dato = arrayDatos.splice(alea, 1);  //aqui estoy sacando del array  empieza en el aleatorio y me devuelve un array con un valor.
+    console.log(typeof(dato));
+
+    dato = dato[0]; //ésto es para sacar el valor del array en el indice 0.
+    console.log(dato);
+    console.log(typeof(dato));
+
+    newDatos.push(dato) //aqui estoy metiendo el valor que he sacado arriba (dato=dato[0] en el nuevo array=newDatos)
+    console.log(newDatos);
+
+    i++
+}
+arrayDatos = newDatos;
+
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

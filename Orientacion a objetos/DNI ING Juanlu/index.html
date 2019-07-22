@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DNI</title>
+    
+    <!-- JavaScript -->
+    <script src="./js/dni.js"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./img/logoING.svg" alt="">
+        </div>
+        <div class="img-phone">
+            <img src="./img/phone-call.png" alt="">  9xx xx xx xx | 9xx xx xx xx
+        </div>
+    </header>
+    <main>
+        <section class="only_wallpaper">
+            <div class="main_img">
+                <img src="./img/fondo.jpg" alt="">
+            </div>
+        </section>
+        <section class="principal">
+            <div class="access">
+                <div class="accessforyou">
+                        <img src="./img/acceso.png" alt="">
+                        <h2>Acceso para ti</h2>
+                </div>
+                <div class="title">
+                        Numero de documento  <br>
+                        <input type="text" id="dni" placeholder="DNI o Tarjeta de Residencia" maxlength=8 onKeyUp="addLetterDni()">
+                    </div>
+                    <div class="identification">
+                            <span>Identificarme con pasaporte</span>
+                    </div>
+                    
+                <div class="date">
+                    Fecha de nacimiento <br>
+                    <input type="text" maxlength=2 placeholder="DD" id="day" onKeyUp="checkDay()">
+                    <input type="text" maxlength=2 placeholder="MM" id="month" onKeyUp="checkMonth()">
+                    <input type="text" maxlength=4 placeholder="AAAA" id="year" onKeyUp="checkYear()">
+                </div>
+                <input type="checkbox" id="acepto" name="acepto"> 
+                <label for="acepto"><span></span> Recordad estos datos ?</label>
+                <div id="msg"></div>
+                <div id="salida"></div>
+                <div class="button">
+                        <input type="button" id="btnEnviar" value="Entrar">
+                </div>
+            </div>
+            <div class="info">
+                <span>Todavia no soy cliente</span> <br><br><br>
+                <img src="./img/norton-logo.png" alt=""> <br>
+                Esta es una zona segura
+                <br>
+                <span>Más información sobre seguridad</span>
+                <div class="dni-e">
+                    <div class="dni-img">
+                        <img src="./img/LogoDNIE-trazado.svg" alt="">
+                    </div>
+                    <div class="text-dni-e">
+                        Si lo deseas, puedes acceder con <span>DNI <br> electrónico</span>
+                    </div>    
+                </div> 
+            </div>
+
+        </section>
+        
+
+    </main>
+
+</body>
+</html>

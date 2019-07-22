@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+const medida = 8;
+for (let i = 0; i < medida; i++){
+    let fila = "";
+    for (let j = 0; j < medida; j++){
+        //console.log(i + " - " + j + " - " + (j + i));// Me pinta en pantalla los resultados de los valores.
+        if ((j+i) % 2 == 0){
+            fila += "_";
+        }
+        else {
+            fila += "#";
+        }
+    }
+    console.log(fila);
+}
+</script>
+</head>
+<body>
+</body>
+</html>

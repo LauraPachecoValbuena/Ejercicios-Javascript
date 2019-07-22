@@ -1,0 +1,184 @@
+<html>
+<head>
+<script>
+
+document.write("typeof true: " + typeof true);
+document.write("<br/>");
+document.write("typeof 3.14: " + typeof 3.14);
+document.write("<br/>");
+document.write("typeof string: " + typeof "String");
+document.write("<br/>");
+document.write("typeof Symbol(): " + typeof Symbol());  //objeto Nuevo q está intregado en JS.Pudiendo crear clases ésto no tiene mucho sentido.
+document.write("<br/>");
+document.write("typeof {a:1}: " + typeof {a:1});  //ésto es un objeto creado en caliente {a:1}.
+document.write("<br/>");
+document.write("typeof [1,2,3]: " + typeof [1,2,3]);  //ésto es un array
+document.write("<br/>");
+document.write("typeof undefined: " + typeof undefined);
+document.write("<br/>");
+document.write("typeof null: " + typeof null);  // es un objeto que NO tiene ningun valor.
+document.write("<br/>");
+
+//-----------------TEMPLATES LITERAL------------------------------------//
+
+let fName = "Manolo";
+let lName = "Perez";
+
+document.write(`${fName} ${lName}`);
+document.write("<br/>");
+document.write("${fName} ${lName}");
+document.write("<br/>");
+
+let num1 = 10
+let num2 = 5;
+
+document.write("num1 + num2 = ${num1 + num2}");  // 
+document.write("<br/>");
+document.write(`num1 + num2 = ${num1 + num2}`);  //ésto es un string literal. Hay que usar las comillas francesas.Aqui estamos haciendo una operación. SIN ESPACIOS.
+document.write("<br/>");
+
+
+//------------------------fUNCIONES USANDO template literals-----------------------------//
+
+function matematicar(operacion, ...valores) {  //ésto  ...valores es un objeto que se comporta como un ARRAY. Y dsp de ésto NO podemos meter más parámetros. Todo lo que vaya detrás lo va a ignorar // ambos parámetros son objetos que se comportan como un array.
+    console.log(typeof(operacion));
+    console.log(typeof(valores));
+    console.log(operacion);
+    console.log(valores);
+    if(operacion[0] == "Suma") {
+        let sumatario = 0;
+        for (let i= 0; i < valores.length; i++){
+            sumatorio += valores[i];
+        }
+        document.write(`Resultado de la sume ${sumatorio}`);
+        document.write("<br/>");
+    }
+    else if (operecion[0] == "Multiplica"){
+        document.write(`Resultado de la multiplicacion ${valores[0]} * ${valores[1]} = ${valores[0] * valores[1]}`);
+        document.write("<br/>");
+    }
+}
+
+matematicar `Suma${10} ${20} ${30} ${40}`;  //llamamos a la funcion y dsp le damos los parámetros.
+matematicar `Multiplica${10} ${10}`;
+
+
+//------------------------ITERAR sobre un string usando TEMPLATES LITERALS-------------------------------------//
+
+let nombre = "Manolito";
+
+for (let c of nombre){
+    document.write(`${c} -`);
+}
+
+//-----------------------------------NUEVOS MÉTOS DE STRING DE ES6------------------------------------------------//
+
+let hola = "Hola";
+
+//repeat
+document.write(hola.repeat(3));
+document.write("<br/>");
+
+//startsWith
+document.write(hola.startsWith("Ho"));
+document.write("<br/>");
+document.write(hola.startsWith("ola"));
+document.write("<br/>");
+
+if (hola.startsWith("Ho")){
+    document.write("sep");
+    document.write("<br/>");
+}
+else {
+    document.write("nop");
+    document.write("<br/>");
+}
+
+//-----------------------endsWith-------------------------------------------------------------//
+
+document.write(hola.endsWith("Ho"));
+document.write("<br/>");
+document.write(hola.endsWith("ola"));
+document.write("<br/>");
+
+//------------------includes---------------------//
+
+document.write(hola.includes("ol"));
+document.write("<br/>");
+
+
+//-----------------------------un string en multiples lineas-------------------------//
+// ésto es ES5
+let datos = "Esto es un \
+string en varias \
+lineas";
+ 
+
+document.write(datos);
+document.write("<br/>");
+
+//ésto es ES6
+
+let datosv2 = `esto
+es
+un string
+en varias
+lineas v2
+`;
+document.write(datosv2);
+document.write("<br/>");
+document.write(`${datosv2}`);
+document.write("<br/>");
+
+//---------------------ARRAYS-----------------------------//
+
+let array1 = Array.of(1,2,3);
+console.log(array1);
+
+//crear un objeto en un array
+let array2 = Array.from("palabra");
+console.log(array2);
+
+//manipular los valores
+let array3 = Array.from(array1, (value) => value * 2);
+console.log(array3);
+
+//Iterar sobre los valores con string literals
+for (let val of array3){
+    document.write(`Array val: ${val} <br/>`);
+}
+
+
+//--------------------métodos de ES6 de ARRAYS------------------//
+
+//reduce
+
+let valores = [1,2,3,4,5,6];
+let sumVals = valores.reduce((a,b) => a + b);
+document.write(`Sum: ${sumVals}`);
+document.write("<br/>");
+
+//filter
+let pares = valores.filter(v => v % 2 != 0);
+console.log(pares);
+document.write(`Sum: ${pares}`);
+document.write("<br/>");
+
+
+//map
+let doubles = valores.map(v => v * 2);
+document.write(`dobles: ${doubles}`);
+document.write("<br/>");
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

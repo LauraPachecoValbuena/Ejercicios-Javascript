@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="js/classes/CalcularDni.js"></script>
+<!-- <script src="js/torrentManagement.js"></script> -->
+<script> 
+
+</script>  
+</head>
+<body onload=""> 
+
+<form>
+<span> Acceso para ti </span>
+<br/>
+<span>Número de Documento <span>
+<input type="text" id="dni" maxlength="8" size="8" onkeyup="cargarLetraDni()"/>
+<br/>
+<span>Fecha de Nacimiento: <span>
+<input type="number" id="dia" max="2" placeholder="DD"/>
+<input type="number" id="mes" max="2" placeholder="MM" />
+<input type="number" id="anio" max="4" placeholder="AAAA" />
+<br/>
+<input type=button value="Enviar" onclick="CalcularDni()"/>
+</form>
+<br/>
+
+</body>
+</html>

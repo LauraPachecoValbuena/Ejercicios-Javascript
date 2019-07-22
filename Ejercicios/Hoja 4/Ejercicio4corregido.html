@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+    
+let i = 0;
+let mayor = 0;
+do {
+    //leo un numero
+    let n = prompt("introduce un numero");
+    //solo si ha metido un numero posivo (no texto y no negativo) lo comparo
+    if (isNaN(n) == false && n > 0){
+        //el texto inicial lo convierto en numero
+        n = parseInt(n);
+        //miro si ese numero es mayor que el numero mayor anterior
+        if (n > mayor){
+            //si lo es, el mayor pasa a ser ese numero
+            mayor = n;
+            console.log("De momento el mayor es " + mayor);
+        }
+        //solo si se cumple que no es un texto y no es < 0, incremento i
+        i++;
+    }
+} while(i < 5);
+
+console.log("Al final es mayor es " + mayor);
+
+</script>
+</head>
+<body>
+</body>
+</html>

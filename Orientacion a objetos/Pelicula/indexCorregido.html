@@ -1,0 +1,37 @@
+<html>
+<head>
+<script 
+type="text/javascript"  src="js/classes/PeliculaCorregido.js" charset="UTF-8">
+</script>
+<script>
+
+let p1 = new Pelicula ("E.T", "Steven Spilberg", 1984, Pelicula.DRAMA);
+//SE LAS PRESTO A MARCOS
+p1.prestar('Marco');
+console.log(p1.getPrestatario());
+
+//MARCOIS ME LA DEVUELVE
+p1.devolver();
+console.log(p1.getPrestatario());
+
+//se la presto a pili
+p1.prestar('pili');
+console.log(p1.getPrestatario());
+
+console.log(p1.getDatos());
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

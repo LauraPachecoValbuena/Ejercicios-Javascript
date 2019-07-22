@@ -1,0 +1,62 @@
+<html>
+<head>
+<script>
+function bsucarMaximoValor(datos) {
+    let mayor = null;
+    if (datos.length > 0){
+        mayor = datos[0];
+       for (let i = 0; i < datos.length; i++) {
+           if (datos[i] > mayor) {
+               mayor = datos[i];
+           }
+       }
+    }
+    
+    return mayor;
+}
+
+
+let arrayDatos = new Array();
+
+let result = bsucarMaximoValor(arrayDatos);
+
+if (result == null){
+    console.log("El array está vacío");
+}
+else {
+    console.log('El valor más alto del array es: ' + result);
+}
+
+/*OTRA OPCION*/
+
+function bsucarMaximoValor(datos) {
+    let mayor = null;
+    if (datos != null && datos.length > 0){
+        mayor = datos[0];
+       for (let i = 0; i < datos.length; i++) {
+           if (datos[i] > mayor) {
+               mayor = datos[i];
+           }
+       }
+    }
+    
+    return mayor;
+}
+
+
+let arrayDatos;
+
+let result = bsucarMaximoValor(arrayDatos);
+
+if (result == null){
+    console.log("El array está vacío");
+}
+else {
+    console.log('El valor más alto del array es: ' + result);
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

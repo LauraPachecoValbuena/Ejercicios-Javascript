@@ -1,0 +1,94 @@
+<html>
+<head>
+<script>
+function convertirNumeroAMorse (digito) {
+    let morse = '';
+    switch(digito) {
+        case 0:
+            morse = '_ _ _ _ _';
+            break;
+        case 1:
+            morse = '._ _ _ _';
+            break;
+        case 2:
+            morse = '.._ _ _';
+            break;
+        case 3:
+            morse = '..._ _';
+            break;
+        case 4:
+            morse = '...._';
+            break;
+        case 5:
+            morse = '.....';
+            break;
+        case 6:
+            morse = '_....';
+            break;
+        case 7:
+            morse = '_ _...';
+            break;
+        case 8:
+            morse = '_ _ _..';
+            break;
+        case 9:
+            morse = '_ _ _ _.';
+            break;
+        default:
+            morse = 'No has introducido la letra correcta';
+            
+    }
+    return morse;
+}
+let result = convertirNumeroAMorse(parseInt(prompt('dame un numero del 0 al 9')));
+console.log (result)
+let digitoNormal = codigoANumero (result);
+
+
+function codigoANumero(c){
+               let res = '';
+
+               switch (c){
+                   case '_ _ _ _ _':
+                    res = 0;
+                   case '._ _ _ _':
+                       res = 1; 
+                       break;
+                   case '.._ _ _':
+                       res = 2; 
+                       break;
+                   case '..._ _':
+                       res = 3; 
+                       break;
+                   case '...._':
+                       res = 4; 
+                       break;
+                   case '.....':
+                       res = 5; 
+                       break;
+                   case '_....':
+                       res = 6; 
+                       break;
+                   case  '_ _...':
+                       res = 7; 
+                       break;
+                   case '_ _ _..':
+                       res = 8; 
+                       break;
+                   case '_ _ _ _.':
+                       res = 9; 
+                       break;
+                   default:
+                       res = "has introducido mas de 5 caracteres o caracteres diferentes de'.' y '-'.";
+               }
+               return res;
+           }
+
+           let morse = prompt("Introducido cinco caracteres entre '.' o '-':");
+           console.log("El codigo de morse: " + morse + ". Y en numero es" + codigoANumero(morse));
+
+</script>
+</head>
+<body>
+</body>
+</html>

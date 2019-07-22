@@ -1,0 +1,92 @@
+<html>
+<head>
+<script 
+type="text/javascript"  src="js/classes/Speaker.js" charset="UTF-8">
+</script>
+<script>
+
+/* ESTO ES PARA LA COPIA DEL ALTAVOZ.
+
+let altavozOriginal = new Speaker();
+altavozOriginal.turnOn();
+altavozOriginal.setVolume(80);
+
+let copia = altavozOriginal.copy();
+
+console.log(altavozOriginal.print());
+console.log(copia.print());
+
+altavozOriginal.setVolume(20);
+console.log(altavozOriginal.print());
+console.log(copia.print());
+
+*/
+let altavozFrontal = new Speaker  ();
+altavozFrontal.turnOn();
+altavozFrontal.setVolume(50);
+
+let altavozLateralIzquierdo = new Speaker ();
+altavozLateralIzquierdo.turnOn();
+
+let altavozLateralDerecho = new Speaker ();
+altavozLateralDerecho.turnOn();
+for (let i = 0; i < 10; i++){   //ésto se usa xa decirle que estamos apretando 10 veces el botón del volumen, con lo cual me increments el volumen a 10 que son las veces que recorrel el for 10 veces. se debe hacer con set xo ésto es otra manera de hacerlo menos práctica=buena.
+    altavozLateralDerecho.increaseVolume();
+}
+
+let altavozTraseroIzquierdo = new Speaker ();
+altavozTraseroIzquierdo.turnOn();
+altavozTraseroIzquierdo.setVolume(10);
+console.log(altavozTraseroIzquierdo.print());
+
+let altavozTraseroDerecho = new Speaker ();
+console.log(altavozTraseroDerecho.print());
+
+//subir el volumen del altavozlaterla izquierdo en 5.  Des esta manera NO tenemos que saber que volumen tiene.
+for (let i = 0; i < 5; i++){
+    altavozLateralIzquierdo.increaseVolume();
+}
+
+//altavozLateralIzquierdo.setVolume(altavozLateralIzquierdo.getVolume() + 5); // NO ES BUENA MANERA xq si el volumen está al 99 y le sumamos 5 será 104 y NO podia pasar de 100. Mirar en prototypr.setvolume.Esta es la otra manera de hacerlo viendo en que estado inicial está el volumen.
+
+//encender el altavoz trasero derecho y establecer su volumen a 35
+altavozTraseroDerecho.turnOn();
+altavozTraseroDerecho.setVolume(35);
+
+//ahora apagamos todos los altavoces. creamos un array y con el for lo recorremos para apagarlo con el turnOff, éste método es comun.
+let speakers = new Array(altavozFrontal,altavozLateralIzquierdo,altavozLateralDerecho, altavozTraseroIzquierdo,altavozTraseroDerecho);
+for (let i = 0; i < speakers.length; i++){
+    speakers[i].turnOff();
+    console.log(speakers[i].print()); // con ésto quiero imprimir la info de cada altavoz.
+}
+
+console.log(altavozTraseroIzquierdo.print());
+
+function modificarAltavoz (altavoz) {
+    let altavozNuevo = altavoz;
+    altavozNuevo.turnOn();
+    altavozNuevo.setVolume(100);
+}
+modificarAltavoz(altavozFrontal);
+console.log(speakers[0].print());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

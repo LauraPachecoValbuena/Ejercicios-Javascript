@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+function positivo (n1){
+    if (isNaN(n1) == true) {
+    console.log ('no has introducido un numero');
+    }
+    else {
+    
+        if (n1 >= 0) {            
+        console.log ('positivo');
+        }
+        else { 
+        console.log ('negativo');
+        }
+    }
+}
+positivo (parseFloat(prompt('dame un número')));
+
+//al revés que el mio:
+function numeros (num) {
+   if (isNaN (num)==false){
+
+        if (num>=0) {
+            console.log ("el número " + num + " es positivo");
+       }
+        else {
+            console.log (" el número " + num + " es negativo");
+        }
+
+    }
+    else {
+        console.log ("el valor introducido no es correcto");
+    }
+}
+numeros (parseInt (prompt ("introduce un número")));
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

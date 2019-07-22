@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+//----------------sabiendo el tamaño que va a tener-------------------//
+function concatenacionArrays(a1,a2){
+           let arrayConcatenado = new Array(a1.length + a2.length); //aquí es donde le decimos q el tamaño es la suma de los length de los dos arrays.
+           for(let i = 0; i < arrayConcatenado.length; i++){
+               if(i < a1.length){
+                   arrayConcatenado[i] = a1[i];
+               }
+               else{
+                   arrayConcatenado[i] = a2[i - a1.length];
+               }
+           }
+           return arrayConcatenado;
+       }
+
+       let arrayDatos1 = new Array(1,2,3,4,5);
+       let arrayDatos2 = new Array(6,7,8,9,0);
+
+       console.log(concatenacionArrays(arrayDatos1,arrayDatos2));
+
+//----------sin saber que tamaño va a tener--------//
+//-------para ésto utilizamos push------------//
+
+function concatenacionArrays(a1,a2){
+    let arrayConcatenado = new Array();
+    for(let i = 0; i < a1.length + a2.length; i++){
+       if(i < a1.length){
+           arrayConcatenado.push(a1[i]);
+       }
+       else{
+           arrayConcatenado.push(a2[i - a1.length]);
+       }
+    }
+    return arrayConcatenado;
+}
+
+let arrayDatos1 = new Array(1,2,3,4,5);
+let arrayDatos2 = new Array(6,7,8,9,0);
+
+console.log(concatenacionArrays(arrayDatos1,arrayDatos2));
+
+</script>
+</head>
+<body>
+</body>
+</html>

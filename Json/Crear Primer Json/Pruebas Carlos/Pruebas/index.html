@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="js/Usuario.js"></script>
+<script src="js/prueba.js"></script>
+<script> 	
+</script>  
+</head>
+<body onload="recuperarDatos();"> 
+
+<form>
+	<span> Nombre </span>
+	<input type=text name="pepe" id="nombre" />
+	<br/>
+	<span> Apellidos </span>
+	<input type=text id="apellidos" />
+	<br/>
+	<span> Comunidad </span>
+	<select id="comunidad">
+		<option value="Galicia">Galicia</option>
+		<option value="Andalucia">Andalucia</option>
+		<option value="Catalunya">Catalunya</option>
+		<option value="Extremadura" selected>Que es Extrema y Dura</option>
+	</select>
+	<br/>
+	<input type=button value="Enviar" onclick="procesarDatos();" />	
+</form>
+
+<br/>
+<br/>
+<br/>
+<div id="datosUsers">
+	
+</div>
+
+
+
+</body>
+</html>

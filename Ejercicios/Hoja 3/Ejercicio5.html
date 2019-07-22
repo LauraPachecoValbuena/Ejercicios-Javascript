@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function euro (n1) {
+    console.log (n1 + 'euros son' + (n1 * 166.386) + 'pesetas');
+}
+euro(parseFloat(prompt('dame los euros que quieras')));
+
+//corregido en clase con constantes.
+function eurToPes(eu) {
+  const EU_PES = 166.386;
+  return eu * EU_PES;
+}
+let cifra = parseInt(prompt("Introduce la cantidad en euros"));
+console.log(eurToPes(cifra) + " pesetas");
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+<script>
+//Tenemos un array de números y queremos que nso de la posicion =Indices de donde está el valor que NO es cero.
+let datos = new Array (
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,0,0),
+    new Array(0,0,0,'x',0),
+    new Array(0,0,0,0,0),
+)
+
+let encontrado = false;
+
+for (let i = 0; i < datos.length && !encontrado; i++) {
+    for (j = 0; j < datos[i].length && !encontrado; j++) {
+        if (isNaN(datos[i][j])) {
+            encontrado==true
+            console.log('la posición del elemento distinto es:'  +  i  +  j );
+        }
+        
+    }
+
+}
+
+//tenemos una funciom que me das dos numeros aleatorios que son los índices en el cual escondo un valor que dsp con los for los busco.
+
+function obtenerNumeroAleatorio(min, max) {
+        return parseInt((Math.random() * ((max + 1) - min) + min));
+    }
+    
+    let datos = new Array(
+        new Array(0,0,0,0,0),
+        new Array(0,0,0,0,0),
+        new Array(0,0,0,0,0),
+        new Array(0,0,0,0,0),
+        new Array(0,0,0,0,0)
+    );
+    let indiceI = obtenerNumeroAleatorio(0, datos.length-1);
+    let indiceJ = obtenerNumeroAleatorio(0, datos.length-1);
+    
+    datos[indiceI][indiceJ] = 1;
+
+    let encontrado = false;
+    for (let i = 0; i < datos.length && !encontrado; i++){
+        for (let j = 0; j < datos[i].length  && !encontrado; j++){
+            if (datos[i][j] != 0){
+                console.log(i + " - " + j + " - v: " + datos[i][j]);
+                encontrado = true;
+            }
+        }
+    }
+
+</script>
+</head>
+<body>
+</body>
+</html>

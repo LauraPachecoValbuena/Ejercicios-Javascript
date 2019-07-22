@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+let datos = new Array("a","b","c","d","e","f");
+console.log(datos.length);
+let masDatos = new Array(1,5,8,4,5,9852,7);
+console.log(masDatos.length);
+
+let gigante = new Array(datos.length + masDatos.length);
+
+for (let i = 0; i < gigante.length; i++) {
+    if (i < datos.length){
+        gigante[i] = datos[i];
+    }
+    else {
+        gigante[i] = masDatos[i - datos.length];
+    }
+}
+
+console.log(gigante);
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

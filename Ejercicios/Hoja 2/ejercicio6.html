@@ -1,0 +1,36 @@
+<html>
+<head>
+<script>
+    
+var preciobruto = parseInt(prompt('dame el valor bruto'));
+var desc1 = 0.05;
+var preciofinal = calculoprecio (preciobruto, desc1);
+    console.log (preciofinal);
+
+function calculoprecio (preciobruto, desc1){ 
+    
+    if (preciobruto <= 20000){
+           return preciofinal == preciobruto * desc1;
+        
+} 
+
+    if (preciobruto >20000 && preciobruto <= 100000){
+
+        return preciofinal == preciobruto - (preciobruto * 0.05);
+
+    }
+
+  
+
+    if (preciobruto >100000){
+
+        return preciofinal == preciobruto - (preciobruto * 0.10);
+
+}
+
+}
+</script>
+</head>
+<body>
+</body>
+</html>

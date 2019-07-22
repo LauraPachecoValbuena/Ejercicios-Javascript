@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+
+function cubo (n1){ 
+    console.log ('el cubo del numero ' + n1 + ' es ' + Math.pow (n1, 3)); 
+}
+cubo(parseFloat(prompt ('dame un número')));
+
+
+//corregido en clase:
+function cubo(numero){
+   return numero * numero * numero;
+}
+
+let valor= parseFloat(prompt("Introduce un numero"));// este valor que meta el usuario se va a la función a (numero).
+console.log(cubo(valor));
+
+</script>
+</head>
+<body>
+</body>
+</html>

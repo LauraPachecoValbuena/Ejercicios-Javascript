@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+
+let arrayDatos = new Array (23, 38, 81, 9);
+let numeroMayor = arrayDatos [0];
+let posicion = 0;
+
+    for (let i = 0; i < arrayDatos.length; i++){
+        if (arrayDatos[i] > numeroMayor) {
+            numeroMayor = arrayDatos[i];
+            posicion = i;
+        }
+        
+    }
+    console.log ('el valor maximo del array es:  ' +  numeroMayor);
+    console.log ('el indice del valor más alto es:  ' +  posicion);
+
+</script>
+</head>
+<body>
+</body>
+</html>

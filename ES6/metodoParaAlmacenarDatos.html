@@ -1,0 +1,65 @@
+<html>
+<head>
+<script>
+
+//SET       //ésto es como un array pero que NO es un array.
+
+let conjunto = new Set();
+
+//.add -> añadir
+conjunto.add(10);
+conjunto.add("Textos");
+
+//.has -> comprobar si tiene el dato
+document.write(`Tiene el 10? ${conjunto.has(10)}`);
+document.write(`<br/>`);
+
+//.size -> tamaño
+document.write(`${conjunto.size}`);
+document.write(`<br/>`);
+
+//.delete para eliminar  //borra el elemento, el dato.
+conjunto.delete(10);
+document.write(`Tiene el 10? ${conjunto.has(10)}`); //ahora ya NO!!
+document.write(`<br/>`);
+
+conjunto.add("Hola");
+conjunto.add(888);
+conjunto.add([7,3,1,4,5]);
+//iterar el set:
+for (let val of conjunto){
+    document.write(`${val}`);
+    document.write(`<br/>`);
+}
+
+console.log(conjunto);
+
+
+
+// ---------- MAPS ---------- // ésto es como un JSON que NO es un JSON.
+// A Map is a collection of key/value pairs
+var mapa = new Map();
+mapa.set("key1", "Random String");
+mapa.set("key2", 10);
+
+// Get values
+document.write(`key1 : ${mapa.get("key1")}<br />`);
+document.write(`key2 : ${mapa.get("key2")}<br />`);
+
+// Get size
+document.write(`Mapa Size : ${mapa.size}<br />`);
+
+// Iterate Map
+mapa.forEach(
+    function (value, key){
+        document.write(`${key} : ${value}<br />`);
+    }
+);
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
